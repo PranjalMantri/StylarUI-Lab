@@ -1,5 +1,4 @@
 import type React from "react";
-import { Link } from "react-router-dom";
 
 interface NavLinkProps {
   href: string;
@@ -7,12 +6,12 @@ interface NavLinkProps {
 }
 
 const Navlink: React.FC<NavLinkProps> = ({ href, children }) => (
-  <Link
-    to={href}
+  <a
+    href={href}
     className="font-medium text-sm rounded-md px-3 py-2 text-slate-300 hover:text-sky-400 transition-colors duration-200"
   >
     {children}{" "}
-  </Link>
+  </a>
 );
 
 export default Navlink;

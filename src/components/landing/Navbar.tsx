@@ -10,7 +10,7 @@ function Navbar() {
       <div>
         <div className="container flex justify-between items-center mx-auto px-6">
           {/* Brand Name */}
-          <Link to={"#"} className="text-2xl font-bold flex items-center">
+          <Link to={"/"} className="text-2xl font-bold flex items-center">
             <span className="text-sky-400">Stylar</span>
             <span className="text-slate-400">UI</span>
             <span className="text-xs text-emerald-500 ml-1.5 bg-emerald-500/10 px-1 py-0.5 font-mono rounded">
