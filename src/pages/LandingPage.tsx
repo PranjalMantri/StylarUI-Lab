@@ -7,7 +7,7 @@ import Pricing from "../components/landing/Pricing";
 
 function LandingPage() {
   return (
-    <div>
+    <div className="min-h-screen bg-slate-900 text-slate-300 antialiased overflow-x-hidden">
       <Navbar />
       <HeroSection />
       <Features />
