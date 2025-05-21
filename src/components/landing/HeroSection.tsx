@@ -33,12 +33,12 @@ function HeroSection() {
             <PlayCircle className="w-6 h-6" />
             Start Styling Now
           </Link>
-          <Link
-            to="#features"
+          <a
+            href="#features"
             className="text-slate-300 hover:text-sky-400 border-2 border-slate-600 hover:border-sky-500 px-8 py-3 w-full flex items-center justify-center gap-2 sm:w-auto transition-all duration-200 transform scale-100 hover:scale-105 rounded-lg text-lg font-medium"
           >
             Learn More <ChevronsDown className="w-5 h-5" />
-          </Link>
+          </a>
         </div>
       </div>
     </section>
