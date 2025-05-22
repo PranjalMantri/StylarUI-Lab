@@ -65,13 +65,13 @@ export default function Playground() {
         />
       )}
 
-      <div className="flex flex-1 bg-gray-100">
+      <div className="flex flex-1">
         <div className="flex flex-col-reverse sm:flex-row w-full flex-1 overflow-auto">
           {/* Configuration Column */}
           <ComponentConfiguration currentComponent={currentComponent} />
 
           {/* Preview Column */}
-          <div className="p-6 bg-white flex-1">
+          <div className="p-6 flex-1">
             <div className="flex flex-col justify-center items-center h-full min-h-[200px]">
               <div className="text-xl font-semibold text-slate-700">
                 Preview Area
