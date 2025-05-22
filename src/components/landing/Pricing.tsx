@@ -19,7 +19,7 @@ function Pricing() {
           today!
         </p>
         <a
-          href="/app" // Link to the actual app
+          href="/playground" // Link to the actual app
           className="bg-white hover:bg-slate-100 text-sky-700 font-semibold py-4 px-10 rounded-lg text-lg transition-all duration-200 transform hover:scale-105 shadow-2xl inline-flex items-center gap-2"
         >
           Launch StylarUI Lab <ArrowRight className="w-5 h-5" />

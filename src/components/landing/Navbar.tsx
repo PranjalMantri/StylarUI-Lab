@@ -24,7 +24,7 @@ function Navbar() {
             <Navlink href="#how-it-works">How It Works</Navlink>
             <Navlink href="#pricing">Pricing</Navlink>
             <Link
-              to={"/app"}
+              to={"/playground"}
               className="bg-sky-600 hover:bg-sky-700 transition-colors duration-200 text-white font-medium py-2 px-4 rounded-lg text-sm shadow-md hover:shadow-lg"
             >
               Launch Lab
@@ -82,7 +82,7 @@ function Navbar() {
             <Navlink href="#how-it-works">How It Works</Navlink>
             <Navlink href="#pricing">Pricing</Navlink>
             <Link
-              to={"/app"}
+              to={"/playground"}
               className="bg-sky-600 hover:bg-sky-700 transition-colors duration-200 text-white font-medium py-2 px-4 rounded-lg text-sm shadow-md hover:shadow-lg"
             >
               Launch Lab

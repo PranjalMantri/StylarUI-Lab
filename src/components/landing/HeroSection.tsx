@@ -27,7 +27,7 @@ function HeroSection() {
 
         <div className="flex justify-center items-center gap-6 flex-col sm:flex-row">
           <Link
-            to="/app"
+            to="/playground"
             className="w-full sm:w-auto flex items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-200 scale-100 transform hover:scale-105 shadow-xl hover:shadow-sky-500/30"
           >
             <PlayCircle className="w-6 h-6" />
