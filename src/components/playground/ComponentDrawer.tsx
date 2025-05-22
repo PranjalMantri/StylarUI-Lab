@@ -1,17 +1,23 @@
 import { LayoutGrid, X } from "lucide-react";
+import ComponentSelectButton from "../ui/ComponentSelectButton";
 
 interface ComponentDrawerProps {
   setIsDrawerOpen: (open: boolean) => void;
+  components: Array<{
+    id: string;
+    name: string;
+    iconName: string;
+    disabled?: boolean;
+  }>;
 }
 
 const ComponentDrawer: React.FC<ComponentDrawerProps> = ({
   setIsDrawerOpen,
-}: {
-  setIsDrawerOpen: any;
+  components,
 }) => (
-  <div className="fixed top-0 left-0 h-full z-50 w-64 sm:w-72 bg-slate-900 text-white shadow-xl">
+  <div className="fixed top-0 left-0 h-full z-50 w-64 sm:w-72 bg-slate-900  text-white shadow-xl">
     {/* Drawer content container */}
-    <div className="p-5 flex flex-col h-full bg-slate-800/60 backdrop-blur-md border-r border-slate-700/70">
+    <div className="p-5 flex flex-col h-full bg-slate-800/60 backdrop-blur-md border-r border-slate-700/70 overflow-auto">
       <div className="flex items-center justify-between mb-6 border-b pb-2 border-slate-700/70">
         <h2 className="text-xl font-semibold flex flex-row items-center gap-2">
           <LayoutGrid
@@ -26,7 +32,15 @@ const ComponentDrawer: React.FC<ComponentDrawerProps> = ({
         />
       </div>
 
-      <div>Button</div>
+      <div className="flex flex-col gap-2">
+        {components.map((component, index) => (
+          <ComponentSelectButton
+            key={index}
+            component={component}
+            selectedComponentId="button"
+          />
+        ))}
+      </div>
     </div>
   </div>
 );

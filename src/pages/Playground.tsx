@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { LayoutGrid } from "lucide-react";
 import { Link } from "react-router-dom";
 import ComponentDrawer from "../components/playground/ComponentDrawer";
+import { COMPONENTS } from "../constants/components";
 
 export default function Playground() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -54,7 +55,12 @@ export default function Playground() {
       </div>
 
       {/* Drawer */}
-      {isDrawerOpen && <ComponentDrawer setIsDrawerOpen={setIsDrawerOpen} />}
+      {isDrawerOpen && (
+        <ComponentDrawer
+          setIsDrawerOpen={setIsDrawerOpen}
+          components={COMPONENTS}
+        />
+      )}
 
       <div className="flex flex-1 bg-gray-100">
         <div className="flex flex-col-reverse sm:flex-row w-full flex-1 overflow-auto">
