@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { LayoutGrid, X } from "lucide-react";
+import { LayoutGrid } from "lucide-react";
 import { Link } from "react-router-dom";
+import ComponentDrawer from "../components/playground/ComponentDrawer";
 
 export default function Playground() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -28,7 +29,7 @@ export default function Playground() {
       }`}
     >
       {/* Header */}
-      <div className="bg-slate-800/60 backdrop-blur-md border-b border-slate-700/70 py-4 sm:px-6 shadow-md z-20 flex items-center justify-between flex-shrink-0">
+      <div className="bg-slate-800/60 backdrop-blur-md border-b border-slate-700/70 px-4 py-4 sm:px-6 shadow-md z-20 flex items-center justify-between flex-shrink-0">
         <Link
           to={"/"}
           className="text-2xl font-bold font-inter flex items-center"
@@ -53,28 +54,7 @@ export default function Playground() {
       </div>
 
       {/* Drawer */}
-      {isDrawerOpen && (
-        <div className="fixed top-0 left-0 h-full z-50 w-64 sm:w-72 bg-slate-900 text-white shadow-xl">
-          {/* Drawer content container */}
-          <div className="p-5 flex flex-col h-full bg-slate-800/60 backdrop-blur-md border-r border-slate-700/70">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-xl font-semibold flex flex-row items-center gap-2">
-                <LayoutGrid
-                  size={18}
-                  className="text-slate-100 align-middle relative top-[1px]"
-                />
-                Components
-              </h2>
-              <X
-                className="w-6 h-6 text-gray-300 hover:text-white"
-                onClick={() => setIsDrawerOpen(false)}
-              />
-            </div>
-
-            <div>Button</div>
-          </div>
-        </div>
-      )}
+      {isDrawerOpen && <ComponentDrawer setIsDrawerOpen={setIsDrawerOpen} />}
 
       <div className="flex flex-1 bg-gray-100">
         <div className="flex flex-col-reverse sm:flex-row w-full flex-1 overflow-auto">
