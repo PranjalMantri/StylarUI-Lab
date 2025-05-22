@@ -32,7 +32,7 @@ const ComponentDrawer: React.FC<ComponentDrawerProps> = ({
         />
       </div>
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 border-b border-slate-700/70">
         {components.map((component, index) => (
           <ComponentSelectButton
             key={index}
@@ -40,6 +40,10 @@ const ComponentDrawer: React.FC<ComponentDrawerProps> = ({
             selectedComponentId="button"
           />
         ))}
+      </div>
+
+      <div className="flex justify-center p-3 text-slate-400 opacity-35">
+        StlarUI Lab
       </div>
     </div>
   </div>

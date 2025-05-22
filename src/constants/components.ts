@@ -4,7 +4,7 @@ export const COMPONENTS: Array<{
   iconName: string;
   disabled?: boolean;
 }> = [
-  { id: "button", name: "Button (Enhanced)", iconName: "MousePointer" },
+  { id: "button", name: "Button", iconName: "MousePointer" },
   { id: "input", name: "Input Field", iconName: "Type", disabled: true },
   { id: "card", name: "Card View", iconName: "LayoutGrid", disabled: true },
   { id: "modal", name: "Modal Dialog", iconName: "Maximize2", disabled: true },
