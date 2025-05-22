@@ -3,10 +3,13 @@ import { LayoutGrid } from "lucide-react";
 import { Link } from "react-router-dom";
 import ComponentDrawer from "../components/playground/ComponentDrawer";
 import { COMPONENTS } from "../constants/components";
+import ComponentConfiguration from "../components/playground/ComponentConfiguration";
+import useComponentStore from "../store/componentStore";
 
 export default function Playground() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+  const { currentComponent } = useComponentStore();
 
   useEffect(() => {
     const handleResize = () => {
@@ -65,11 +68,7 @@ export default function Playground() {
       <div className="flex flex-1 bg-gray-100">
         <div className="flex flex-col-reverse sm:flex-row w-full flex-1 overflow-auto">
           {/* Configuration Column */}
-          <div className="p-6 w-1/3 flex-shrink-0 border-r border-slate-300">
-            <h3 className="text-lg font-semibold text-slate-700 mb-4">
-              Configuration
-            </h3>
-          </div>
+          <ComponentConfiguration currentComponent={currentComponent} />
 
           {/* Preview Column */}
           <div className="p-6 bg-white flex-1">

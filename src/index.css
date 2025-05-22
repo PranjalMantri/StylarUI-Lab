@@ -2,6 +2,10 @@
 
 @import "tailwindcss";
 
+@plugin 'tailwind-scrollbar' {
+  nocompatible: true;
+}
+
 @theme {
   --font-inter: "Inter", "sans-serif";
 }
