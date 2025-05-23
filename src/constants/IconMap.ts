@@ -48,6 +48,8 @@ import {
   AlignLeft,
   CalendarDays,
   Table,
+  PaletteIcon,
+  TextIcon,
 } from "lucide-react";
 
 export const iconMap = {
@@ -100,5 +102,6 @@ export const iconMap = {
   AlignLeft,
   CalendarDays,
   Table,
-  // Add more icons here as you use them
+  PaletteIcon,
+  TextIcon,
 };
