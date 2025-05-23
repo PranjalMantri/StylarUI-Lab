@@ -18,9 +18,6 @@ const ConfigSection: React.FC<ConfigSectionProps> = ({
 }) => {
   const Icon = iconMap[icon as keyof typeof iconMap];
 
-  console.log(Icon);
-  console.log(typeof Icon);
-
   return (
     <div
       className={`bg-slate-800/30 p-4 rounded-lg border border-slate-700/50 mb-6 ${classname}`}
