@@ -44,7 +44,7 @@ const TailwindColorPicker: React.FC<TailwindColorPickerProps> = ({
       ></span>
 
       <span
-        className="text-sm text-slate-200 font-mono select-none"
+        className="text-sm text-slate-200 select-none"
         aria-label={`Current color ${color}`}
       >
         {color}

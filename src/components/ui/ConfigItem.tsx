@@ -24,7 +24,9 @@ const ConfigItem: React.FC<ConfigItemProps> = ({
 }) => {
   return (
     <div className={`flex flex-col gap-1 mb-4 ${className}`}>
-      <label className="block text-xs text-slate-400 mb-0.5">{title}</label>
+      <label className="block text-xs text-slate-400 mb-0.5 overflow-hidden text-ellipsis">
+        {title}
+      </label>
 
       {type == "input" && (
         <input
