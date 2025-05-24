@@ -1,9 +1,10 @@
 import type { ReactNode } from "react";
-import { iconMap } from "../../constants/IconMap";
+import * as LucideIcons from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 interface ConfigSectionProps {
   title: string;
-  icon: ReactNode;
+  icon: keyof typeof LucideIcons;
   children: ReactNode;
   classname?: string;
   contentClassName?: string;
@@ -16,7 +17,7 @@ const ConfigSection: React.FC<ConfigSectionProps> = ({
   classname = "",
   contentClassName = "",
 }) => {
-  const Icon = iconMap[icon as keyof typeof iconMap];
+  const IconComponent = LucideIcons[icon] as LucideIcon;
 
   return (
     <div
@@ -24,7 +25,7 @@ const ConfigSection: React.FC<ConfigSectionProps> = ({
     >
       <div className="flex flex-col gap-4">
         <div className="flex items-center text-sm font-medium text-sky-300 mb-2">
-          <Icon className="w-4 h-4 mr-2 shrink-0" />
+          {IconComponent && <IconComponent className="w-4 h-4 mr-2 shrink-0" />}
           {title}
         </div>
 
