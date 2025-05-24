@@ -38,9 +38,7 @@ const TailwindColorPicker: React.FC<TailwindColorPickerProps> = ({
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (!disabled && (e.key === "Enter" || e.key === " ")) {
       e.preventDefault();
-      if (colorInputRef.current) {
-        colorInputRef.current.click();
-      }
+      colorInputRef.current?.click();
     }
   };
 
@@ -48,7 +46,7 @@ const TailwindColorPicker: React.FC<TailwindColorPickerProps> = ({
     <div
       onClick={handleClickContainer}
       onKeyDown={handleKeyDown}
-      className={`w-full inline-flex border items-center p-2 space-x-3 rounded-lg shadow-sm transition-colors duration-150 ${
+      className={`relative w-full inline-flex border items-center p-2 space-x-3 rounded-lg shadow-sm transition-colors duration-150 ${
         disabled
           ? "border-slate-500 bg-slate-800/30 cursor-not-allowed opacity-60"
           : "border-slate-600 bg-slate-700/50 cursor-pointer hover:bg-slate-700/70 focus:ring-1 focus:ring-sky-500 focus:border-sky-500"
@@ -80,7 +78,7 @@ const TailwindColorPicker: React.FC<TailwindColorPickerProps> = ({
         disabled={disabled}
         value={color}
         onChange={handleColorChange}
-        className="opacity-0 w-0 h-0 absolute"
+        className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer"
         tabIndex={-1}
         aria-hidden={true}
       />
