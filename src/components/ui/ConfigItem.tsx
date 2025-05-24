@@ -99,7 +99,11 @@ const ConfigItem: React.FC<ConfigItemProps> = ({
       )}
 
       {type === "switch" && (
-        <div ref={switchContainerRef} className="flex items-center gap-2">
+        <div
+          ref={switchContainerRef}
+          className="flex items-center justify-between gap-2"
+        >
+          <span className="text-sm text-slate-200">{title}</span>
           <label className="relative inline-flex items-center cursor-pointer">
             <input
               type="checkbox"
@@ -123,7 +127,6 @@ const ConfigItem: React.FC<ConfigItemProps> = ({
               />
             </div>
           </label>
-          <span className="text-sm text-slate-200">{title}</span>
         </div>
       )}
 
@@ -138,7 +141,13 @@ const ConfigItem: React.FC<ConfigItemProps> = ({
             placeholder="Search icons..."
             value={iconSearch}
             onChange={(e) => setIconSearch(e.target.value)}
-            className="p-2 rounded-md bg-slate-700/50 border border-slate-600 text-slate-200 placeholder:text-slate-400 text-sm"
+            disabled={disabled}
+            className={`p-2 rounded-md border border-slate-600 text-slate-200 transition-colors placeholder:text-slate-400 text-sm 
+                 ${
+                   disabled
+                     ? "border-slate-500 bg-slate-800/30 cursor-not-allowed opacity-60"
+                     : "border-slate-600 bg-slate-700/50 cursor-pointer hover:bg-slate-700/70 focus:ring-1 focus:ring-sky-500 focus:border-sky-500"
+                 }`}
           />
 
           <div className="max-h-48 overflow-y-auto grid grid-cols-6 gap-2 mt-1 scrollbar scrollbar-w-1 scrollbar-thumb-sky-500 scrollbar-thumb-rounded-full">
