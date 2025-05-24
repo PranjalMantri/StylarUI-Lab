@@ -1,7 +1,16 @@
-import type React from "react";
+import React from "react";
 import TailwindColorPicker from "./TailwindColorPicker";
+import { iconMap } from "../../constants/IconMap";
+import { useState } from "react";
 
-type ConfigType = "input" | "select" | "radio" | "color" | "date" | "switch";
+type ConfigType =
+  | "input"
+  | "select"
+  | "radio"
+  | "color"
+  | "date"
+  | "switch"
+  | "icon";
 
 interface ConfigItemProps {
   title: string;
@@ -24,9 +33,15 @@ const ConfigItem: React.FC<ConfigItemProps> = ({
   placeholder = "",
   className = "",
 }) => {
+  const [iconSearch, setIconSearch] = useState("");
+
+  const iconList = Object.keys(iconMap).filter((name) =>
+    name.toLowerCase().includes(iconSearch.toLowerCase())
+  );
+
   return (
     <div className={`flex flex-col gap-1 mb-4 ${className}`}>
-      {type != "switch" && (
+      {type != "switch" && type != "icon" && (
         <label className="block text-xs text-slate-400 mb-0.5 overflow-hidden text-ellipsis">
           {title}
         </label>
@@ -87,6 +102,50 @@ const ConfigItem: React.FC<ConfigItemProps> = ({
           </div>
           <span className="text-sm text-slate-200">{title}</span>
         </label>
+      )}
+
+      {type === "icon" && (
+        <div className="flex flex-col gap-2">
+          <label className="block text-xs text-slate-400 mb-0.5 overflow-hidden text-ellipsis">
+            {title}
+          </label>
+
+          <input
+            type="text"
+            placeholder="Search icons..."
+            value={iconSearch}
+            onChange={(e) => setIconSearch(e.target.value)}
+            className="p-2 rounded-md bg-slate-700/50 border border-slate-600 text-slate-200 placeholder:text-slate-400 text-sm"
+          />
+
+          <div className="max-h-48 overflow-y-auto grid grid-cols-6 gap-2 mt-1 scrollbar scrollbar-w-1 scrollbar-thumb-sky-500 scrollbar-thumb-rounded-full">
+            {iconList.slice(0, 60).map((iconName) => {
+              const IconComponent = (iconMap as any)[iconName];
+              return (
+                <button
+                  key={iconName}
+                  onClick={() => onChange(iconName)}
+                  className={`p-2 rounded hover:bg-sky-600 transition-colors flex items-center justify-center border aspect-square
+              ${value === iconName ? "border-sky-500" : "border-transparent"}`}
+                  title={iconName} // Tooltip for long names
+                >
+                  <IconComponent size={20} className="text-slate-200" />
+                </button>
+              );
+            })}
+          </div>
+
+          {value && (
+            <div className="flex items-center gap-2 mt-2 text-slate-300 text-sm flex-wrap">
+              Selected:
+              <code className="text-sky-400 truncate max-w-[200px]">
+                {value}
+              </code>
+              {(iconMap as any)[value] &&
+                React.createElement((iconMap as any)[value], { size: 20 })}
+            </div>
+          )}
+        </div>
       )}
     </div>
   );
