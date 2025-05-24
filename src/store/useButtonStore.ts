@@ -67,6 +67,8 @@ interface ButtonStore {
   setCustomClass: (customClass: string) => void;
   isDisabled: boolean;
   setIsDisabled: () => void;
+  isLoading: boolean;
+  setIsLoading: () => void;
 }
 
 const useButtonStore = create<ButtonStore>((set, get) => ({
@@ -201,6 +203,10 @@ const useButtonStore = create<ButtonStore>((set, get) => ({
   isDisabled: false,
   setIsDisabled: () => {
     set({ isDisabled: !get().isDisabled });
+  },
+  isLoading: false,
+  setIsLoading: () => {
+    set({ isLoading: !get().isLoading });
   },
 }));
 

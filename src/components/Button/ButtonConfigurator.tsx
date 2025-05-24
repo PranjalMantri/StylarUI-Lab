@@ -70,6 +70,8 @@ function ButtonConfigurator() {
     setIsIconUse,
     isDisabled,
     setIsDisabled,
+    isLoading,
+    setIsLoading,
   } = useButtonStore();
 
   const borderWidths = [
@@ -518,7 +520,12 @@ function ButtonConfigurator() {
           type={"switch"}
           value={isDisabled}
           onChange={setIsDisabled}
-          placeholder="e.g. my-custom-button animate-pulse"
+        ></ConfigItem>
+        <ConfigItem
+          title={"Loading State"}
+          type={"switch"}
+          value={isLoading}
+          onChange={setIsLoading}
         ></ConfigItem>
       </ConfigSection>
     </div>
