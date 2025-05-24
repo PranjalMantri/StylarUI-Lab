@@ -84,31 +84,31 @@ const useButtonStore = create<ButtonStore>((set, get) => ({
   setBackgroundColor: (backgroundColor: string) => {
     set({ backgroundColor });
   },
-  hoverTextColor: "#a1a1aa",
+  hoverTextColor: "#0284c7",
   setHoverTextColor: (hoverTextColor: string) => {
     set({ hoverTextColor });
   },
-  hoverBackground: "#3730a3",
+  hoverBackground: "#0369a1",
   setHoverBackground: (hoverBackground: string) => {
     set({ hoverBackground });
   },
-  isGradientActive: true,
+  isGradientActive: false,
   setIsGradientActive: () => {
     set({ isGradientActive: !get().isGradientActive });
   },
-  gradientDirection: "to-b",
+  gradientDirection: "to-r",
   setGradientDirection: (gradientDirection: string) => {
     set({ gradientDirection });
   },
-  gradientFromColor: "#0284c7",
+  gradientFromColor: "#0ea5e9",
   setGradientFromColor: (gradientFromColor: string) => {
     set({ gradientFromColor });
   },
-  gradientToColor: "#a1a1aa",
+  gradientToColor: "#38bdf8",
   setGradientToColor: (gradientToColor: string) => {
     set({ gradientToColor });
   },
-  gradientViaColor: "#a1a1aa",
+  gradientViaColor: "",
   setGradientViaColor: (gradientViaColor: string) => {
     set({ gradientViaColor });
   },
@@ -124,7 +124,7 @@ const useButtonStore = create<ButtonStore>((set, get) => ({
   setBorderSide: (borderSide: string) => {
     set({ borderSide });
   },
-  borderColor: "#fefefe",
+  borderColor: "#e0f2fe",
   setBorderColor: (borderColor: string) => {
     set({ borderColor });
   },
@@ -144,7 +144,7 @@ const useButtonStore = create<ButtonStore>((set, get) => ({
   setButtonHeight: (buttonHeight: string) => {
     set({ buttonHeight });
   },
-  buttonPaddingX: "2",
+  buttonPaddingX: "4",
   setButtonPaddingX: (buttonPaddingX: string) => {
     set({ buttonPaddingX });
   },
@@ -160,7 +160,7 @@ const useButtonStore = create<ButtonStore>((set, get) => ({
   setButtonMarginY: (buttonMarginY: string) => {
     set({ buttonMarginY });
   },
-  fontSize: "text-lg",
+  fontSize: "text-base",
   setFontSize: (fontSize: string) => {
     set({ fontSize });
   },
