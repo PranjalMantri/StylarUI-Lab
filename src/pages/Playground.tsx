@@ -5,6 +5,7 @@ import ComponentDrawer from "../components/playground/ComponentDrawer";
 import { COMPONENTS } from "../constants/components";
 import ComponentConfiguration from "../components/playground/ComponentConfiguration";
 import useComponentStore from "../store/componentStore";
+import ComponentPreview from "../components/playground/ComponentPreview";
 
 export default function Playground() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(true);
@@ -73,7 +74,7 @@ export default function Playground() {
             <div className="p-6 flex-1">
               <div className="flex flex-col justify-center items-center h-full min-h-[200px]">
                 <div className="text-xl font-semibold text-slate-700">
-                  Preview Area
+                  <ComponentPreview />
                 </div>
                 <p className="text-slate-500 mt-2">
                   Your content preview will be displayed here.
