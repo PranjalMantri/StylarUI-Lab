@@ -10,18 +10,18 @@ import {
 
 function SizingSpacingConfig() {
   const {
-    buttonWidth,
-    setButtonWidth,
-    buttonHeight,
-    setButtonHeight,
-    buttonPaddingX,
-    setButtonPaddingX,
-    buttonPaddingY,
-    setButtonPaddingY,
-    buttonMarginX,
-    setButtonMarginX,
-    buttonMarginY,
-    setButtonMarginY,
+    width,
+    setWidth,
+    height,
+    setHeight,
+    paddingX,
+    setPaddingX,
+    paddingY,
+    setPaddingY,
+    marginX,
+    setMarginX,
+    marginY,
+    setMarginY,
   } = useButtonStore();
 
   return (
@@ -31,43 +31,43 @@ function SizingSpacingConfig() {
           <ConfigItem
             title={"Height"}
             type={"select"}
-            value={buttonHeight}
-            onChange={setButtonHeight}
+            value={height}
+            onChange={setHeight}
             options={heightOptions}
           ></ConfigItem>
           <ConfigItem
             title={"Width"}
             type={"select"}
-            value={buttonWidth}
-            onChange={setButtonWidth}
+            value={width}
+            onChange={setWidth}
             options={widthOptions}
           ></ConfigItem>
           <ConfigItem
             title={"Padding X"}
             type={"select"}
-            value={buttonPaddingX}
-            onChange={setButtonPaddingX}
+            value={paddingX}
+            onChange={setPaddingX}
             options={paddingOptions}
           ></ConfigItem>
           <ConfigItem
             title={"Padding Y"}
             type={"select"}
-            value={buttonPaddingY}
-            onChange={setButtonPaddingY}
+            value={paddingY}
+            onChange={setPaddingY}
             options={paddingOptions}
           ></ConfigItem>
           <ConfigItem
             title={"Margin X"}
             type={"select"}
-            value={buttonMarginX}
-            onChange={setButtonMarginX}
+            value={marginX}
+            onChange={setMarginX}
             options={marginOptions}
           ></ConfigItem>
           <ConfigItem
             title={"Margin Y"}
             type={"select"}
-            value={buttonMarginY}
-            onChange={setButtonMarginY}
+            value={marginY}
+            onChange={setMarginY}
             options={marginOptions}
           ></ConfigItem>
         </div>

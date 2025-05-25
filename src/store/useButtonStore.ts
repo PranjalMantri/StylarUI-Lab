@@ -33,18 +33,18 @@ interface ButtonStore {
   setBorderRadius: (borderRadius: string) => void;
   boxShadow: string;
   setBoxShadow: (boxShadow: string) => void;
-  buttonWidth: string;
-  setButtonWidth: (buttonWidth: string) => void;
-  buttonHeight: string;
-  setButtonHeight: (buttonHeight: string) => void;
-  buttonPaddingX: string;
-  setButtonPaddingX: (buttonPaddingX: string) => void;
-  buttonPaddingY: string;
-  setButtonPaddingY: (buttonPaddingY: string) => void;
-  buttonMarginX: string;
-  setButtonMarginX: (buttonMarginX: string) => void;
-  buttonMarginY: string;
-  setButtonMarginY: (buttonMarginY: string) => void;
+  width: string;
+  setWidth: (width: string) => void;
+  height: string;
+  setHeight: (height: string) => void;
+  paddingX: string;
+  setPaddingX: (paddingX: string) => void;
+  paddingY: string;
+  setPaddingY: (paddingY: string) => void;
+  marginX: string;
+  setMarginX: (marginX: string) => void;
+  marginY: string;
+  setMarginY: (marginY: string) => void;
   fontSize: string;
   setFontSize: (fontSize: string) => void;
   fontWeight: string;
@@ -136,29 +136,29 @@ const useButtonStore = create<ButtonStore>((set, get) => ({
   setBoxShadow: (boxShadow: string) => {
     set({ boxShadow });
   },
-  buttonWidth: "auto",
-  setButtonWidth: (buttonWidth: string) => {
-    set({ buttonWidth });
+  width: "auto",
+  setWidth: (width: string) => {
+    set({ width });
   },
-  buttonHeight: "auto",
-  setButtonHeight: (buttonHeight: string) => {
-    set({ buttonHeight });
+  height: "auto",
+  setHeight: (height: string) => {
+    set({ height });
   },
-  buttonPaddingX: "4",
-  setButtonPaddingX: (buttonPaddingX: string) => {
-    set({ buttonPaddingX });
+  paddingX: "4",
+  setPaddingX: (paddingX: string) => {
+    set({ paddingX });
   },
-  buttonPaddingY: "2",
-  setButtonPaddingY: (buttonPaddingY: string) => {
-    set({ buttonPaddingY });
+  paddingY: "2",
+  setPaddingY: (paddingY: string) => {
+    set({ paddingY });
   },
-  buttonMarginX: "2",
-  setButtonMarginX: (buttonMarginX: string) => {
-    set({ buttonMarginX });
+  marginX: "2",
+  setMarginX: (marginX: string) => {
+    set({ marginX });
   },
-  buttonMarginY: "2",
-  setButtonMarginY: (buttonMarginY: string) => {
-    set({ buttonMarginY });
+  marginY: "2",
+  setMarginY: (marginY: string) => {
+    set({ marginY });
   },
   fontSize: "text-base",
   setFontSize: (fontSize: string) => {

@@ -40,12 +40,12 @@ const ButtonPreview: React.FC = () => {
     borderSide,
     borderRadius,
     boxShadow,
-    buttonHeight,
-    buttonWidth,
-    buttonPaddingX,
-    buttonPaddingY,
-    buttonMarginX,
-    buttonMarginY,
+    height,
+    width,
+    paddingX,
+    paddingY,
+    marginX,
+    marginY,
     fontSize,
     fontWeight,
     isIconUse,
@@ -86,8 +86,8 @@ const ButtonPreview: React.FC = () => {
   };
 
   const sizeStyles: React.CSSProperties = {
-    height: heightMap[buttonHeight],
-    width: widthMap[buttonWidth],
+    height: heightMap[height],
+    width: widthMap[width],
   };
 
   const fontStyles: React.CSSProperties = {
@@ -96,17 +96,17 @@ const ButtonPreview: React.FC = () => {
   };
 
   const paddingStyles: React.CSSProperties = {
-    paddingLeft: paddingValues[buttonPaddingX],
-    paddingRight: paddingValues[buttonPaddingX],
-    paddingTop: paddingValues[buttonPaddingY],
-    paddingBottom: paddingValues[buttonPaddingY],
+    paddingLeft: paddingValues[paddingX],
+    paddingRight: paddingValues[paddingX],
+    paddingTop: paddingValues[paddingY],
+    paddingBottom: paddingValues[paddingY],
   };
 
   const marginStyles: React.CSSProperties = {
-    marginLeft: paddingValues[buttonMarginX],
-    marginRight: paddingValues[buttonMarginX],
-    marginTop: paddingValues[buttonMarginY],
-    marginBottom: paddingValues[buttonMarginY],
+    marginLeft: paddingValues[marginX],
+    marginRight: paddingValues[marginX],
+    marginTop: paddingValues[marginY],
+    marginBottom: paddingValues[marginY],
   };
 
   const transitionStyles: React.CSSProperties = {
@@ -114,6 +114,10 @@ const ButtonPreview: React.FC = () => {
     transitionTimingFunction: transitionTimingFunctionMap[timingFunction],
     transitionDelay: transitionDelayMap[delay],
     transitionDuration: transitionDurationMap[duration],
+  };
+
+  const gapStyle: React.CSSProperties = {
+    gap: isLoading ? "0px" : "8px",
   };
 
   const buttonInLineStyles: React.CSSProperties = {
@@ -131,11 +135,12 @@ const ButtonPreview: React.FC = () => {
     ...marginStyles,
     ...fontStyles,
     ...transitionStyles,
+    ...gapStyle,
   };
   return (
     <button
       style={buttonInLineStyles}
-      className={`flex items-center justify-center gap-2 px-4 py-2 rounded-md transition-all
+      className={`flex items-center justify-center px-4 py-2 rounded-md transition-all
       ${isDisabled || isLoading ? "opacity-50 cursor-not-allowed" : ""}
     `}
       onMouseEnter={() => setIsHovered(true)}
@@ -154,7 +159,7 @@ const ButtonPreview: React.FC = () => {
       )}
 
       {/* Label */}
-      <span>{isLoading ? "Loading..." : label}</span>
+      <span>{isLoading ? "" : label}</span>
 
       {/* Right Icon */}
       {!isLoading && isIconUse && iconPosition === "right" && IconComponent && (
