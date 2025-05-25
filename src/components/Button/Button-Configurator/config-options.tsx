@@ -88,11 +88,11 @@ export const fontSizeOptions = [
   { label: "Tiny", value: "text-xs" },
   { label: "Small", value: "text-sm" },
   { label: "Base", value: "text-base" },
-  { label: "Medium", value: "text-lg" },
-  { label: "Large", value: "text-xl" },
-  { label: "Extra Large", value: "text-2xl" },
-  { label: "2x Large", value: "text-3xl" },
-  { label: "3x Large", value: "text-4xl" },
+  { label: "Medium", value: "text-md" },
+  { label: "Large", value: "text-lg" },
+  { label: "Extra Large", value: "text-xl" },
+  { label: "2x Large", value: "text-2xl" },
+  { label: "3x Large", value: "text-3xl" },
 ];
 
 export const fontWeightOptions = [
