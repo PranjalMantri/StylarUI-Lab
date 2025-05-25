@@ -1,4 +1,6 @@
 import useButtonStore from "../../../store/useButtonStore";
+import { Copy } from "lucide-react";
+import { useState } from "react";
 
 function ButtonCodeExporter() {
   const {
@@ -36,6 +38,8 @@ function ButtonCodeExporter() {
     isDisabled,
     isLoading,
   } = useButtonStore();
+
+  const [copied, setCopied] = useState(false);
 
   const generatedCode = () => {
     let buttonContent = label;
@@ -119,16 +123,46 @@ function ButtonCodeExporter() {
     };`;
   };
 
-  console.log(generatedCode());
+  const code = generatedCode();
+
+  const handleCopyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(code);
+      setCopied(true);
+      setTimeout(() => {
+        setCopied(false);
+      }, 1500);
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+    }
+  };
 
   return (
     <div>
-      <p className="text-slate-500 mt-2">
-        Your content preview will be displayed here.
+      <p className="text-slate-500 mb-1">
+        Here is the generated code for your button:
       </p>
-      <button className="mt-4 py-2 px-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-colors duration-150">
-        Copy Code
-      </button>
+      <div className="relative rounded-md shadow-sm overflow-auto max-h-48 scrollbar scrollbar-w-1 scrollbar-thumb-sky-500 scrollbar-thumb-rounded-full">
+        <pre className="bg-slate-900/40 p-4 rounded-lg text-sm font-mono text-sky-300 whitespace-pre-wrap">
+          <code>{code}</code>
+        </pre>
+        <div className="absolute top-2 right-2">
+          <button
+            onClick={handleCopyToClipboard}
+            className="bg-sky-500 hover:bg-sky-600 text-slate-200 font-semibold py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+          >
+            <Copy className="h-4 w-4" />
+          </button>
+        </div>
+      </div>
+      <div className="mt-2 flex justify-center">
+        <button
+          onClick={handleCopyToClipboard}
+          className="py-2 px-4 bg-sky-500 hover:bg-sky-600 transition-colors duration-200 text-white font-medium rounded-lg text-sm shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center gap-2"
+        >
+          {copied ? "Copied!" : "Copy"} <Copy className="h-4 w-4" />
+        </button>
+      </div>
     </div>
   );
 }
