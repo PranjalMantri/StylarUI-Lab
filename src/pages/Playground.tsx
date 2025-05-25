@@ -6,7 +6,7 @@ import { COMPONENTS } from "../constants/components";
 import ComponentConfiguration from "../components/playground/ComponentConfiguration";
 import useComponentStore from "../store/componentStore";
 import ComponentPreview from "../components/playground/ComponentPreview";
-import CodeExporter from "../components/Code-Exporter/CodeExporter";
+import CodeExporter from "../components/playground/CodeExporter";
 
 export default function Playground() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(true);
