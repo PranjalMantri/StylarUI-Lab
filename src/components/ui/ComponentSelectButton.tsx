@@ -1,4 +1,5 @@
-import { iconMap } from "../../constants/IconMap";
+import * as LucideIcons from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 interface ComponentSelectButtonProps {
   component: {
@@ -14,7 +15,9 @@ const ComponentSelectButton: React.FC<ComponentSelectButtonProps> = ({
   component,
   selectedComponentId,
 }) => {
-  const Icon = iconMap[component.iconName as keyof typeof iconMap];
+  const Icon = LucideIcons[
+    component.iconName as keyof typeof LucideIcons
+  ] as LucideIcon;
 
   return (
     <button
