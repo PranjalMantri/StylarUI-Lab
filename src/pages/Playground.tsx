@@ -9,7 +9,7 @@ import ComponentPreview from "../components/playground/ComponentPreview";
 import CodeExporter from "../components/playground/CodeExporter";
 
 export default function Playground() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(true);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const { currentComponent } = useComponentStore();
 
