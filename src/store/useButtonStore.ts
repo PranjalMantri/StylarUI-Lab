@@ -128,11 +128,11 @@ const useButtonStore = create<ButtonStore>((set, get) => ({
   setBorderColor: (borderColor: string) => {
     set({ borderColor });
   },
-  borderRadius: "Small",
+  borderRadius: "rounded-sm",
   setBorderRadius: (borderRadius: string) => {
     set({ borderRadius });
   },
-  boxShadow: "Small",
+  boxShadow: "shadow-md",
   setBoxShadow: (boxShadow: string) => {
     set({ boxShadow });
   },
@@ -172,7 +172,7 @@ const useButtonStore = create<ButtonStore>((set, get) => ({
   setIsIconUse: (isIconUse: boolean) => {
     set({ isIconUse });
   },
-  icon: "Copy",
+  icon: "Zap",
   setIcon: (icon: string) => {
     set({ icon });
   },
@@ -180,15 +180,15 @@ const useButtonStore = create<ButtonStore>((set, get) => ({
   setIconPosition: (iconPosition: string) => {
     set({ iconPosition });
   },
-  baseTransition: "all",
+  baseTransition: "transition-all",
   setBaseTransition: (baseTransition: string) => {
     set({ baseTransition });
   },
-  timingFunction: "all",
+  timingFunction: "ease-in",
   setTimingFunction: (timingFunction: string) => {
     set({ timingFunction });
   },
-  duration: "all",
+  duration: "0.2s",
   setDuration: (duration: string) => {
     set({ duration });
   },
