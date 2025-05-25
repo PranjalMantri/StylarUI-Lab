@@ -107,7 +107,6 @@ function ButtonConfigurator() {
     { label: "Large", value: "rounded-lg" },
     { label: "Extra Large", value: "rounded-xl" },
     { label: "2x Extra Large", value: "rounded-2xl" },
-    { label: "Full (Pill Shape)", value: "rounded-full" },
   ];
 
   const boxShadowOptions = [
@@ -118,7 +117,6 @@ function ButtonConfigurator() {
     { label: "Large", value: "shadow-lg" },
     { label: "Extra Large", value: "shadow-xl" },
     { label: "2x Extra Large", value: "shadow-2xl" },
-    { label: "Inner Shadow", value: "shadow-inner" },
   ];
 
   const widthOptions = [
@@ -171,7 +169,6 @@ function ButtonConfigurator() {
     { label: "Extra Large", value: "text-2xl" },
     { label: "2x Large", value: "text-3xl" },
     { label: "3x Large", value: "text-4xl" },
-    { label: "Massive", value: "text-5xl" },
   ];
 
   const fontWeightOptions = [
@@ -183,7 +180,6 @@ function ButtonConfigurator() {
     { label: "Semi Bold", value: "font-semibold" },
     { label: "Bold", value: "font-bold" },
     { label: "Extra Bold", value: "font-extrabold" },
-    { label: "Black (Thicc AF)", value: "font-black" },
   ];
 
   const iconPositionOptions = [
@@ -192,18 +188,18 @@ function ButtonConfigurator() {
   ];
 
   const transitionPropertyOptions = [
-    { label: "All", value: "all" },
-    { label: "Opacity", value: "opacity" },
-    { label: "Transform", value: "transform" },
-    { label: "Background Color", value: "background-color" },
-    { label: "Text Color", value: "color" },
-    { label: "Border", value: "border" },
-    { label: "Box Shadow", value: "box-shadow" },
-    { label: "Height", value: "height" },
-    { label: "Width", value: "width" },
-    { label: "Padding", value: "padding" },
-    { label: "Margin", value: "margin" },
-    { label: "Filter", value: "filter" },
+    { label: "All", value: "transition-all" },
+    { label: "Opacity", value: "transition-opacity" },
+    { label: "Transform", value: "transition-transform" },
+    { label: "Background Color", value: "transition-bg" },
+    { label: "Text Color", value: "transition-color" },
+    { label: "Border", value: "transition-border" },
+    { label: "Box Shadow", value: "transition-shadow" },
+    { label: "Height", value: "transition-height" },
+    { label: "Width", value: "transition-width" },
+    { label: "Padding", value: "transition-padding" },
+    { label: "Margin", value: "transition-margin" },
+    { label: "Filter", value: "transition-filter" },
   ];
 
   const timingFunctionOptions = [
@@ -236,6 +232,15 @@ function ButtonConfigurator() {
     { label: "1 second", value: "1s" },
     { label: "1.5 seconds", value: "1.5s" },
     { label: "2 seconds", value: "2s" },
+  ];
+
+  const gradientDirectionOptions = [
+    { label: "Top to Bottom", value: "to-b" },
+    { label: "Bottom to Top", value: "to-t" },
+    { label: "Left to Right", value: "to-r" },
+    { label: "Right to Left", value: "to-l" },
+    { label: "Top Left to Bottom Right", value: "to-br" },
+    { label: "Bottom Right to Top Left", value: "to-tl" },
   ];
 
   return (
@@ -296,14 +301,7 @@ function ButtonConfigurator() {
             value={gradientDirection}
             onChange={setGradientDirection}
             disabled={!isGradientActive}
-            options={[
-              { label: "Top to Bottom", value: "to-b" },
-              { label: "Bottom to Top", value: "to-t" },
-              { label: "Left to Right", value: "to-r" },
-              { label: "Right to Left", value: "to-l" },
-              { label: "Top Left to Bottom Right", value: "to-br" },
-              { label: "Bottom Right to Top Left", value: "to-tl" },
-            ]}
+            options={gradientDirectionOptions}
           ></ConfigItem>
           <ConfigItem
             title={"From"}
