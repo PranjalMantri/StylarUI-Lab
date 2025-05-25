@@ -6,6 +6,7 @@ import { COMPONENTS } from "../constants/components";
 import ComponentConfiguration from "../components/playground/ComponentConfiguration";
 import useComponentStore from "../store/componentStore";
 import ComponentPreview from "../components/playground/ComponentPreview";
+import CodeExporter from "../components/Code-Exporter/CodeExporter";
 
 export default function Playground() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(true);
@@ -72,16 +73,11 @@ export default function Playground() {
 
             {/* Preview Column */}
             <div className="p-6 flex-1">
-              <div className="flex flex-col justify-center items-center h-full min-h-[200px]">
-                <div className="text-xl font-semibold text-slate-700">
+              <div className="flex flex-col justify-center items-center h-full w-full min-h-[200px]">
+                <div className="text-xl font-semibold text-slate-700 w-full">
                   <ComponentPreview />
                 </div>
-                <p className="text-slate-500 mt-2">
-                  Your content preview will be displayed here.
-                </p>
-                <button className="mt-4 py-2 px-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-colors duration-150">
-                  Copy Code
-                </button>
+                <CodeExporter />
               </div>
             </div>
           </div>
