@@ -1,5 +1,5 @@
 import type React from "react";
-import ButtonConfigurator from "../Button/ButtonConfigurator";
+import ButtonConfigurator from "../Button/Button-Configurator/ButtonConfigurator";
 
 interface ConfiguratorProps {
   currentComponent: {
