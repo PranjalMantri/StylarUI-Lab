@@ -1,19 +1,10 @@
 import { SlidersHorizontal } from "lucide-react";
-import type React from "react";
 import Configurator from "./Configurator";
+import useComponentStore from "../../store/componentStore";
 
-interface ComponentConfigurationProps {
-  currentComponent: {
-    id: string;
-    name: string;
-    iconName: string;
-    disabled?: boolean;
-  };
-}
+const ComponentConfiguration = () => {
+  const { currentComponent } = useComponentStore();
 
-const ComponentConfiguration: React.FC<ComponentConfigurationProps> = ({
-  currentComponent,
-}) => {
   return (
     <div className="p-6 w-screen md:min-w-80 md:w-1/3 flex-shrink-0">
       <section className="bg-slate-800/50 border border-slate-700/70 rounded-xl p-4 sm:p-6 shadow-2xl max-h-[calc(100vh-80px)">
@@ -24,7 +15,7 @@ const ComponentConfiguration: React.FC<ComponentConfigurationProps> = ({
           </h2>
         </div>
 
-        <Configurator currentComponent={currentComponent} />
+        <Configurator />
       </section>
     </div>
   );

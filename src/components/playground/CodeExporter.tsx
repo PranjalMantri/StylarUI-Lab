@@ -1,6 +1,7 @@
 import { Code } from "lucide-react";
 import ButtonCodeExporter from "../Button/CodeExporter/ButtonCodeExporter";
 import useComponentStore from "../../store/componentStore";
+import InputCodeExporter from "../Input/Input-Code-Exporter/InputCodeExporter";
 
 function CodeExporter() {
   const { currentComponent } = useComponentStore();
@@ -9,6 +10,8 @@ function CodeExporter() {
     switch (currentComponent.id) {
       case "button":
         return <ButtonCodeExporter />;
+      case "input":
+        return <InputCodeExporter />;
       default:
         return <div>Select a component to get code</div>;
     }
