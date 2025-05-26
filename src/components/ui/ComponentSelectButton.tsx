@@ -1,5 +1,6 @@
 import * as LucideIcons from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import useComponentStore from "../../store/componentStore";
 
 interface ComponentSelectButtonProps {
   component: {
@@ -19,11 +20,15 @@ const ComponentSelectButton: React.FC<ComponentSelectButtonProps> = ({
     component.iconName as keyof typeof LucideIcons
   ] as LucideIcon;
 
+  const { setCurrentComponent } = useComponentStore();
+
   return (
     <button
       disabled={component.disabled}
       onClick={() => {
         if (component.disabled) return;
+
+        setCurrentComponent(component);
       }}
       className={`w-full flex items-center px-3 gap-3.5 py-2.5 rounded-lg text-md transition-all duration-150 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800 group
     ${component.disabled ? "opacity-50 cursor-not-allowed text-slate-500" : ""}

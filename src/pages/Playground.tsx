@@ -4,14 +4,12 @@ import { Link } from "react-router-dom";
 import ComponentDrawer from "../components/playground/ComponentDrawer";
 import { COMPONENTS } from "../constants/components";
 import ComponentConfiguration from "../components/playground/ComponentConfiguration";
-import useComponentStore from "../store/componentStore";
 import ComponentPreview from "../components/playground/ComponentPreview";
 import CodeExporter from "../components/playground/CodeExporter";
 
 export default function Playground() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const { currentComponent } = useComponentStore();
 
   useEffect(() => {
     const handleResize = () => {
@@ -69,7 +67,7 @@ export default function Playground() {
         <div className="flex flex-1 overflow-hidden">
           <div className="flex flex-col-reverse sm:flex-row w-full flex-1 overflow-auto">
             {/* Configuration Column */}
-            <ComponentConfiguration currentComponent={currentComponent} />
+            <ComponentConfiguration />
 
             {/* Preview Column */}
             <div className="p-6 flex-1">

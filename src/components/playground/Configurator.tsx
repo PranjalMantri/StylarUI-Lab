@@ -1,19 +1,15 @@
-import type React from "react";
 import ButtonConfigurator from "../Button/Button-Configurator/ButtonConfigurator";
+import useComponentStore from "../../store/componentStore";
+import InputConfigurator from "../Input/Input-Configurator/InputConfigurator";
 
-interface ConfiguratorProps {
-  currentComponent: {
-    id: string;
-    name: string;
-    iconName: string;
-    disabled?: boolean;
-  };
-}
+const Configurator = () => {
+  const { currentComponent } = useComponentStore();
 
-const Configurator: React.FC<ConfiguratorProps> = ({ currentComponent }) => {
   switch (currentComponent.id) {
     case "button":
       return <ButtonConfigurator />;
+    case "input":
+      return <InputConfigurator />;
     default:
       return <div>Select a component to customize</div>;
   }

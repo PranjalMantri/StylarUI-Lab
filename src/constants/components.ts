@@ -5,7 +5,7 @@ export const COMPONENTS: Array<{
   disabled?: boolean;
 }> = [
   { id: "button", name: "Button", iconName: "MousePointer" },
-  { id: "input", name: "Input Field", iconName: "Type", disabled: true },
+  { id: "input", name: "Input Field", iconName: "Type" },
   {
     id: "dropdown",
     name: "Dropdown Select",
