@@ -1,54 +1,67 @@
-# React + TypeScript + Vite
+# StylarUi Lab
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+StylarUi Lab is a modern React + TypeScript application built with Vite, designed for rapid prototyping and configuration of UI components. The project features a playground where users can interactively customize and preview UI elements such as buttons and inputs, and export their code for use in other projects.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Component Playground:** Visually configure and preview UI components in real time.
+- **Code Export:** Instantly generate and copy the code for your configured components.
+- **Modular Architecture:** Organized by component type (Button, Input, etc.) for easy extension and maintenance.
+- **TypeScript Support:** Ensures type safety and improved developer experience.
+- **Vite-Powered:** Fast development server with Hot Module Replacement (HMR).
+- **ESLint Integration:** Enforced code quality with recommended and type-aware linting rules.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Node.js (v16 or higher recommended)
+- npm or yarn
+
+### Installation
+
+```bash
+npm install
+# or
+yarn install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Running the Development Server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run dev
+# or
+yarn dev
 ```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app in your browser.
+
+## Project Structure
+
+```
+src/
+  components/
+    Button/
+    Input/
+    playground/
+    ui/
+  constants/
+  lib/
+  pages/
+  store/
+```
+
+- **components/**: Contains all UI components and their configurators/previews.
+- **constants/**: Shared constants (e.g., component definitions, icon maps).
+- **lib/**: Utility functions.
+- **pages/**: Main application pages (e.g., Playground, LandingPage).
+- **store/**: State management using custom hooks and stores.
+
+## Customization & Extensibility
+
+- Add new components by creating a folder under `src/components/` and updating the constants and store as needed.
+- Extend the playground by adding new configurators and preview components.
+
+## License
+
+MIT
