@@ -43,6 +43,11 @@ const ConfigItem: React.FC<ConfigItemProps> = ({
 
   const handleSwitchToggle = (e: React.MouseEvent) => {
     e.preventDefault();
+
+    if (disabled) {
+      return;
+    }
+
     onChange(!value);
     if (switchInputRef.current) {
       switchInputRef.current.blur();
@@ -64,7 +69,13 @@ const ConfigItem: React.FC<ConfigItemProps> = ({
           disabled={disabled}
           placeholder={placeholder}
           onChange={(e) => onChange(e.target.value)}
-          className="w-full p-2.5 bg-slate-700/50 border border-slate-600 rounded-md text-slate-200 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors placeholder:text-slate-400 text-sm"
+          className={`w-full p-2.5 rounded-md border text-slate-200 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors placeholder:text-slate-400 text-sm 
+            ${
+              disabled
+                ? "border-slate-500 bg-slate-800/30 cursor-not-allowed opacity-60"
+                : "border-slate-600 bg-slate-700/50 cursor-pointer hover:bg-slate-700/70 focus:ring-1 focus:ring-sky-500 focus:border-sky-500"
+            }
+                 `}
         />
       )}
 
@@ -111,7 +122,7 @@ const ConfigItem: React.FC<ConfigItemProps> = ({
               onChange={() => onChange(!value)}
               onMouseDown={(e) => e.preventDefault()}
               className="sr-only"
-              disabled={disabled}
+              disabled={true}
               ref={switchInputRef}
             />
             <div
