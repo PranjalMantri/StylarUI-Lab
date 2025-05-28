@@ -21,14 +21,6 @@ interface InputStore {
   setPlaceholderText: (placeholder: string) => void;
   valueText: string;
   setValueText: (valueText: string) => void;
-  placeholderColor: string;
-  setPlaceholderColor: (placeholderColor: string) => void;
-  placeholderFontSize: string;
-  setPlaceholderFontSize: (placeholderFontSize: string) => void;
-  placeholderFontWeight: string;
-  setPlaceholderFontWeight: (placeholderFontWeight: string) => void;
-  placeholderOpacity: string;
-  setPlaceholderOpacity: (placeholderOpacity: string) => void;
   valueTextColor: string;
   setValueTextColor: (valueTextColor: string) => void;
   valueFontSize: string;
@@ -102,15 +94,15 @@ const useInputStore = create<InputStore>((set, get) => ({
   setLabelText: (labelText: string) => {
     set({ labelText });
   },
-  labelTextColor: "#ffffff",
+  labelTextColor: "#4B5563",
   setLabelTextColor: (labelTextColor: string) => {
     set({ labelTextColor });
   },
-  labelHoverTextColor: "#ffffff",
+  labelHoverTextColor: "#1F2937",
   setLabelHoverTextColor: (labelHoverTextColor: string) => {
     set({ labelHoverTextColor });
   },
-  labelFontSize: "text-md",
+  labelFontSize: "text-sm",
   setLabelFontSize: (labelFontSize: string) => {
     set({ labelFontSize });
   },
@@ -122,7 +114,7 @@ const useInputStore = create<InputStore>((set, get) => ({
   setInputType: (inputType: string) => {
     set({ inputType });
   },
-  placeholderText: "Placeholder...",
+  placeholderText: "Placeholder",
   setPlaceholderText: (placeholderText: string) => {
     set({ placeholderText });
   },
@@ -130,27 +122,11 @@ const useInputStore = create<InputStore>((set, get) => ({
   setValueText: (valueText: string) => {
     set({ valueText });
   },
-  placeholderColor: "#fefefe",
-  setPlaceholderColor: (placeholderColor: string) => {
-    set({ placeholderColor });
-  },
-  placeholderFontSize: "text-sm",
-  setPlaceholderFontSize: (placeholderFontSize: string) => {
-    set({ placeholderFontSize });
-  },
-  placeholderFontWeight: "font-normal",
-  setPlaceholderFontWeight: (placeholderFontWeight: string) => {
-    set({ placeholderFontWeight });
-  },
-  placeholderOpacity: "opacity-100",
-  setPlaceholderOpacity: (placeholderOpacity: string) => {
-    set({ placeholderOpacity });
-  },
-  valueTextColor: "#000000",
+  valueTextColor: "#111827",
   setValueTextColor: (valueTextColor: string) => {
     set({ valueTextColor });
   },
-  valueFontSize: "text-base",
+  valueFontSize: "text-sm",
   setValueFontSize: (valueFontSize: string) => {
     set({ valueFontSize });
   },
@@ -162,7 +138,7 @@ const useInputStore = create<InputStore>((set, get) => ({
   setValueTextAlign: (valueTextAlign: string) => {
     set({ valueTextAlign });
   },
-  backgroundColor: "#fefefe",
+  backgroundColor: "#FFFFFF",
   setBackgroundColor: (backgroundColor: string) => {
     set({ backgroundColor });
   },
@@ -178,7 +154,7 @@ const useInputStore = create<InputStore>((set, get) => ({
   setHeight: (height: string) => set({ height }),
   width: "auto",
   setWidth: (width: string) => set({ width }),
-  paddingX: "4",
+  paddingX: "3",
   setPaddingX: (paddingX: string) => set({ paddingX }),
   paddingY: "2",
   setPaddingY: (paddingY: string) => set({ paddingY }),
@@ -188,7 +164,7 @@ const useInputStore = create<InputStore>((set, get) => ({
   setMarginY: (marginY: string) => set({ marginY }),
   borderRadius: "rounded-md",
   setBorderRadius: (borderRadius: string) => set({ borderRadius }),
-  boxShadow: "shadow",
+  boxShadow: "shadow-sm",
   setBoxShadow: (boxShadow: string) => set({ boxShadow }),
   labelCustomClass: "",
   setLabelCustomClass: (labelCustomClass: string) => set({ labelCustomClass }),
@@ -207,7 +183,7 @@ const useInputStore = create<InputStore>((set, get) => ({
   setAutoComplete: (autoComplete: string) => set({ autoComplete }),
   maxLength: 100,
   setMaxLength: (maxLength: number | undefined) => set({ maxLength }),
-  minLength: 6,
+  minLength: undefined,
   setMinLength: (minLength: number | undefined) => set({ minLength }),
   hasIcon: false,
   setHasIcon: () => set((state) => ({ hasIcon: !state.hasIcon })),
@@ -215,9 +191,9 @@ const useInputStore = create<InputStore>((set, get) => ({
   setIcon: (icon: string) => set({ icon }),
   iconPosition: "left",
   setIconPosition: (iconPosition: "left" | "right") => set({ iconPosition }),
-  iconColor: "#000000", // Default icon color
+  iconColor: "#6B7280",
   setIconColor: (iconColor: string) => set({ iconColor }),
-  obscureTextSymbol: "*",
+  obscureTextSymbol: "•",
   setObscureTextSymbol: (obscureTextSymbol: string) => {
     set({ obscureTextSymbol });
   },
