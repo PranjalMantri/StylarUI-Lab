@@ -4,20 +4,11 @@ import ConfigSection from "../../ui/ConfigSection";
 import {
   fontSizeOptions,
   fontWeightOptions,
-  opacityOptions,
   textAlignOptions,
 } from "./config-options";
 
 const AppearanceConfig = () => {
   const {
-    placeholderColor,
-    setPlaceholderColor,
-    placeholderFontSize,
-    setPlaceholderFontSize,
-    placeholderFontWeight,
-    setPlaceholderFontWeight,
-    placeholderOpacity,
-    setPlaceholderOpacity,
     valueTextColor,
     setValueTextColor,
     valueFontSize,
@@ -32,37 +23,6 @@ const AppearanceConfig = () => {
 
   return (
     <>
-      <ConfigSection title={"Placeholder Appearance"} icon={"BadgeInfo"}>
-        <div className="grid grid-cols-2 gap-x-4">
-          <ConfigItem
-            title="Placeholder color"
-            type="color"
-            value={placeholderColor}
-            onChange={setPlaceholderColor}
-          />
-          <ConfigItem
-            title={"Placeholder font size"}
-            type={"select"}
-            value={placeholderFontSize}
-            onChange={setPlaceholderFontSize}
-            options={fontSizeOptions}
-          />
-          <ConfigItem
-            title={"Placeholder font weight"}
-            type={"select"}
-            value={placeholderFontWeight}
-            onChange={setPlaceholderFontWeight}
-            options={fontWeightOptions}
-          />
-          <ConfigItem
-            title={"Placeholder Opacity"}
-            type={"select"}
-            value={placeholderOpacity}
-            onChange={setPlaceholderOpacity}
-            options={opacityOptions}
-          />
-        </div>
-      </ConfigSection>
       <ConfigSection title={"Input Appearance"} icon={"Palette"}>
         <ConfigItem
           title="Background color"

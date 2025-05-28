@@ -28,16 +28,6 @@ export const inputTypeOptions = [
   { label: "Url", value: "url" },
 ];
 
-export const opacityOptions = [
-  { label: "0%", value: "opacity-0" },
-  { label: "10%", value: "opacity-10" },
-  { label: "25%", value: "opacity-25" },
-  { label: "50%", value: "opacity-50" },
-  { label: "75%", value: "opacity-75" },
-  { label: "90%", value: "opacity-90" },
-  { label: "100%", value: "opacity-100" },
-];
-
 export const textAlignOptions = [
   { label: "Left", value: "text-left" },
   { label: "Center", value: "text-center" },
