@@ -96,3 +96,14 @@ export const textAlignMap: Record<string, React.CSSProperties["textAlign"]> = {
   "text-center": "center",
   "text-right": "right",
 };
+
+export const iconSizeMap: Record<string, string> = {
+  "text-xs": "w-2 h-2",
+  "text-sm": "w-3.5 h-3.5",
+  "text-base": "w-4 h-4",
+  "text-md": "w-4 h-4",
+  "text-lg": "w-5 h-5",
+  "text-xl": "w-5 h-5",
+  "text-2xl": "w-6 h-6",
+  "text-3xl": "w-7 h-7",
+};

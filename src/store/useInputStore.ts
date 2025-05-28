@@ -122,7 +122,7 @@ const useInputStore = create<InputStore>((set, get) => ({
   setValueText: (valueText: string) => {
     set({ valueText });
   },
-  valueTextColor: "#111827",
+  valueTextColor: "#e2e8f0",
   setValueTextColor: (valueTextColor: string) => {
     set({ valueTextColor });
   },
@@ -142,9 +142,9 @@ const useInputStore = create<InputStore>((set, get) => ({
   setBackgroundColor: (backgroundColor: string) => {
     set({ backgroundColor });
   },
-  borderWidth: "border-0",
+  borderWidth: "border",
   setBorderWidth: (borderWidth: string) => set({ borderWidth }),
-  borderColor: "#edeff2",
+  borderColor: "#45556c",
   setBorderColor: (borderColor: string) => set({ borderColor }),
   borderStyle: "solid",
   setBorderStyle: (borderStyle: string) => set({ borderStyle }),
@@ -187,7 +187,7 @@ const useInputStore = create<InputStore>((set, get) => ({
   setMinLength: (minLength: number | undefined) => set({ minLength }),
   hasIcon: false,
   setHasIcon: () => set((state) => ({ hasIcon: !state.hasIcon })),
-  icon: "",
+  icon: "Lock",
   setIcon: (icon: string) => set({ icon }),
   iconPosition: "left",
   setIconPosition: (iconPosition: "left" | "right") => set({ iconPosition }),

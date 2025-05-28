@@ -14,6 +14,7 @@ import {
   paddingValues,
   widthMap,
   textAlignMap,
+  iconSizeMap, // Added iconSizeMap import
 } from "./styleMaps";
 import { buildBorderStyle } from "./styleUtils";
 
@@ -152,7 +153,7 @@ function InputPreview() {
         {hasIcon && iconPosition === "left" && IconComponent && (
           <IconComponent
             style={{ color: iconColor }}
-            className="absolute left-3 w-5 h-5 pointer-events-none"
+            className={`absolute left-3 pointer-events-none ${iconSizeMap[valueFontSize]}`}
           />
         )}
         <input
@@ -179,7 +180,7 @@ function InputPreview() {
         {hasIcon && iconPosition === "right" && IconComponent && (
           <IconComponent
             style={{ color: iconColor }}
-            className="absolute right-3 w-5 h-5 pointer-events-none"
+            className={`absolute right-3 pointer-events-none ${iconSizeMap[valueFontSize]}`} // Updated className
           />
         )}
       </div>
