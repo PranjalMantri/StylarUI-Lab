@@ -138,17 +138,17 @@ const useInputStore = create<InputStore>((set, get) => ({
   setValueTextAlign: (valueTextAlign: string) => {
     set({ valueTextAlign });
   },
-  backgroundColor: "#FFFFFF",
+  backgroundColor: "#2A384D",
   setBackgroundColor: (backgroundColor: string) => {
     set({ backgroundColor });
   },
-  borderWidth: "1",
+  borderWidth: "border-0",
   setBorderWidth: (borderWidth: string) => set({ borderWidth }),
-  borderColor: "#D1D5DB",
+  borderColor: "#edeff2",
   setBorderColor: (borderColor: string) => set({ borderColor }),
   borderStyle: "solid",
   setBorderStyle: (borderStyle: string) => set({ borderStyle }),
-  borderSide: "all",
+  borderSide: "border",
   setBorderSide: (borderSide: string) => set({ borderSide }),
   height: "auto",
   setHeight: (height: string) => set({ height }),
