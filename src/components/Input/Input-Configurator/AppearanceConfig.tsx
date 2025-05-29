@@ -8,18 +8,16 @@ import {
 } from "./config-options";
 
 const AppearanceConfig = () => {
-  const {
-    valueTextColor,
-    setValueTextColor,
-    valueFontSize,
-    setValueFontSize,
-    valueFontWeight,
-    setValueFontWeight,
-    valueTextAlign,
-    setValueTextAlign,
-    backgroundColor,
-    setBackgroundColor,
-  } = useInputStore();
+  const valueTextColor = useInputStore((state) => state.valueTextColor);
+  const setValueTextColor = useInputStore((state) => state.setValueTextColor);
+  const valueFontSize = useInputStore((state) => state.valueFontSize);
+  const setValueFontSize = useInputStore((state) => state.setValueFontSize);
+  const valueFontWeight = useInputStore((state) => state.valueFontWeight);
+  const setValueFontWeight = useInputStore((state) => state.setValueFontWeight);
+  const valueTextAlign = useInputStore((state) => state.valueTextAlign);
+  const setValueTextAlign = useInputStore((state) => state.setValueTextAlign);
+  const backgroundColor = useInputStore((state) => state.backgroundColor);
+  const setBackgroundColor = useInputStore((state) => state.setBackgroundColor);
 
   return (
     <>

@@ -4,16 +4,14 @@ import ConfigSection from "../../ui/ConfigSection";
 import { borderWidths, borderStyles, sidesOptions } from "./config-options";
 
 function BorderConfig() {
-  const {
-    borderWidth,
-    setBorderWidth,
-    borderStyle,
-    setBorderStyle,
-    borderSide,
-    setBorderSide,
-    borderColor,
-    setBorderColor,
-  } = useButtonStore();
+  const borderWidth = useButtonStore((state) => state.borderWidth);
+  const setBorderWidth = useButtonStore((state) => state.setBorderWidth);
+  const borderStyle = useButtonStore((state) => state.borderStyle);
+  const setBorderStyle = useButtonStore((state) => state.setBorderStyle);
+  const borderSide = useButtonStore((state) => state.borderSide);
+  const setBorderSide = useButtonStore((state) => state.setBorderSide);
+  const borderColor = useButtonStore((state) => state.borderColor);
+  const setBorderColor = useButtonStore((state) => state.setBorderColor);
 
   return (
     <div>

@@ -4,18 +4,26 @@ import useButtonStore from "../../../store/useButtonStore";
 import { gradientDirectionOptions } from "./config-options";
 
 function GradientConfig() {
-  const {
-    isGradientActive,
-    setIsGradientActive,
-    gradientDirection,
-    setGradientDirection,
-    gradientFromColor,
-    setGradientFromColor,
-    gradientToColor,
-    setGradientToColor,
-    gradientViaColor,
-    setGradientViaColor,
-  } = useButtonStore();
+  const isGradientActive = useButtonStore((state) => state.isGradientActive);
+  const setIsGradientActive = useButtonStore(
+    (state) => state.setIsGradientActive
+  );
+  const gradientDirection = useButtonStore((state) => state.gradientDirection);
+  const setGradientDirection = useButtonStore(
+    (state) => state.setGradientDirection
+  );
+  const gradientFromColor = useButtonStore((state) => state.gradientFromColor);
+  const setGradientFromColor = useButtonStore(
+    (state) => state.setGradientFromColor
+  );
+  const gradientToColor = useButtonStore((state) => state.gradientToColor);
+  const setGradientToColor = useButtonStore(
+    (state) => state.setGradientToColor
+  );
+  const gradientViaColor = useButtonStore((state) => state.gradientViaColor);
+  const setGradientViaColor = useButtonStore(
+    (state) => state.setGradientViaColor
+  );
 
   return (
     <div>

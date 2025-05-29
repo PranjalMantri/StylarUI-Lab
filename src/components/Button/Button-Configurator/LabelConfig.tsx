@@ -3,7 +3,8 @@ import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
 
 function LabelConfig() {
-  const { label, setLabel } = useButtonStore();
+  const label = useButtonStore((state) => state.label);
+  const setLabel = useButtonStore((state) => state.setLabel);
 
   return (
     <div>

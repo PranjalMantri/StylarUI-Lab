@@ -9,16 +9,14 @@ import {
 } from "./config-options";
 
 function TransitionConfig() {
-  const {
-    baseTransition,
-    setBaseTransition,
-    timingFunction,
-    setTimingFunction,
-    duration,
-    setDuration,
-    delay,
-    setDelay,
-  } = useButtonStore();
+  const baseTransition = useButtonStore((state) => state.baseTransition);
+  const setBaseTransition = useButtonStore((state) => state.setBaseTransition);
+  const timingFunction = useButtonStore((state) => state.timingFunction);
+  const setTimingFunction = useButtonStore((state) => state.setTimingFunction);
+  const duration = useButtonStore((state) => state.duration);
+  const setDuration = useButtonStore((state) => state.setDuration);
+  const delay = useButtonStore((state) => state.delay);
+  const setDelay = useButtonStore((state) => state.setDelay);
 
   return (
     <div>

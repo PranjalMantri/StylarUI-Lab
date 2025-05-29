@@ -4,7 +4,10 @@ import { fontSizeOptions, fontWeightOptions } from "./config-options";
 import useButtonStore from "../../../store/useButtonStore";
 
 function TypographyConfig() {
-  const { fontSize, setFontSize, fontWeight, setFontWeight } = useButtonStore();
+  const fontSize = useButtonStore((state) => state.fontSize);
+  const setFontSize = useButtonStore((state) => state.setFontSize);
+  const fontWeight = useButtonStore((state) => state.fontWeight);
+  const setFontWeight = useButtonStore((state) => state.setFontWeight);
 
   return (
     <div>

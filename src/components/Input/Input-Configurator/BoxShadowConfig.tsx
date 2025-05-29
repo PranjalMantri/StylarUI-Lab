@@ -4,8 +4,10 @@ import ConfigSection from "../../ui/ConfigSection";
 import { borderRadiusOptions, boxShadowOptions } from "./config-options";
 
 function BoxShadowConfig() {
-  const { borderRadius, setBorderRadius, boxShadow, setBoxShadow } =
-    useInputStore();
+  const borderRadius = useInputStore((state) => state.borderRadius);
+  const setBorderRadius = useInputStore((state) => state.setBorderRadius);
+  const boxShadow = useInputStore((state) => state.boxShadow);
+  const setBoxShadow = useInputStore((state) => state.setBoxShadow);
 
   return (
     <div>

@@ -3,7 +3,8 @@ import ConfigSection from "../../ui/ConfigSection";
 import useButtonStore from "../../../store/useButtonStore";
 
 function AdvancedConfig() {
-  const { customClass, setCustomClass } = useButtonStore();
+  const customClass = useButtonStore((state) => state.customClass);
+  const setCustomClass = useButtonStore((state) => state.setCustomClass);
 
   return (
     <div>

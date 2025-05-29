@@ -3,12 +3,10 @@ import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
 
 function CustomConfig() {
-  const {
-    labelCustomClass,
-    setLabelCustomClass,
-    inputCustomClass,
-    setInputCustomClass,
-  } = useInputStore();
+  const labelCustomClass = useInputStore((state) => state.labelCustomClass);
+  const setLabelCustomClass = useInputStore((state) => state.setLabelCustomClass);
+  const inputCustomClass = useInputStore((state) => state.inputCustomClass);
+  const setInputCustomClass = useInputStore((state) => state.setInputCustomClass);
 
   return (
     <div>

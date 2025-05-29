@@ -3,16 +3,14 @@ import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
 
 function CoreAppearanceConfig() {
-  const {
-    textColor,
-    setTextColor,
-    backgroundColor,
-    setBackgroundColor,
-    hoverTextColor,
-    setHoverTextColor,
-    hoverBackground,
-    setHoverBackground,
-  } = useButtonStore();
+  const textColor = useButtonStore((state) => state.textColor);
+  const setTextColor = useButtonStore((state) => state.setTextColor);
+  const backgroundColor = useButtonStore((state) => state.backgroundColor);
+  const setBackgroundColor = useButtonStore((state) => state.setBackgroundColor);
+  const hoverTextColor = useButtonStore((state) => state.hoverTextColor);
+  const setHoverTextColor = useButtonStore((state) => state.setHoverTextColor);
+  const hoverBackground = useButtonStore((state) => state.hoverBackground);
+  const setHoverBackground = useButtonStore((state) => state.setHoverBackground);
 
   return (
     <div>

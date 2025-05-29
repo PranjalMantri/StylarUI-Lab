@@ -4,16 +4,14 @@ import ConfigSection from "../../ui/ConfigSection";
 import { borderWidths, borderStyles, sidesOptions } from "./config-options";
 
 const BorderConfig = () => {
-  const {
-    borderWidth,
-    setBorderWidth,
-    borderColor,
-    setBorderColor,
-    borderStyle,
-    setBorderStyle,
-    borderSide,
-    setBorderSide,
-  } = useInputStore();
+  const borderWidth = useInputStore((state) => state.borderWidth);
+  const setBorderWidth = useInputStore((state) => state.setBorderWidth);
+  const borderColor = useInputStore((state) => state.borderColor);
+  const setBorderColor = useInputStore((state) => state.setBorderColor);
+  const borderStyle = useInputStore((state) => state.borderStyle);
+  const setBorderStyle = useInputStore((state) => state.setBorderStyle);
+  const borderSide = useInputStore((state) => state.borderSide);
+  const setBorderSide = useInputStore((state) => state.setBorderSide);
 
   return (
     <ConfigSection title="Border" icon="Layers">

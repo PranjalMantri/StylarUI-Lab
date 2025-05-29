@@ -4,16 +4,14 @@ import ConfigSection from "../../ui/ConfigSection";
 import { iconPositionOptions } from "./config-options";
 
 function IconConfig() {
-  const {
-    hasIcon,
-    setHasIcon,
-    icon,
-    setIcon,
-    iconPosition,
-    setIconPosition,
-    iconColor,
-    setIconColor,
-  } = useInputStore();
+  const hasIcon = useInputStore((state) => state.hasIcon);
+  const setHasIcon = useInputStore((state) => state.setHasIcon);
+  const icon = useInputStore((state) => state.icon);
+  const setIcon = useInputStore((state) => state.setIcon);
+  const iconPosition = useInputStore((state) => state.iconPosition);
+  const setIconPosition = useInputStore((state) => state.setIconPosition);
+  const iconColor = useInputStore((state) => state.iconColor);
+  const setIconColor = useInputStore((state) => state.setIconColor);
 
   return (
     <div>

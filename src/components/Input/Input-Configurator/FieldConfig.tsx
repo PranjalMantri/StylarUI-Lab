@@ -4,19 +4,17 @@ import ConfigSection from "../../ui/ConfigSection";
 import { obscureTextSymbolOptions } from "./config-options";
 
 function FieldConfig() {
-  const {
-    isRequired,
-    setIsRequired,
-    useObscuredText,
-    setUseObscuredText,
-    maxLength,
-    setMaxLength,
-    minLength,
-    setMinLength,
-    inputType,
-    obscureTextSymbol,
-    setObscureTextSymbol,
-  } = useInputStore();
+  const isRequired = useInputStore((state) => state.isRequired);
+  const setIsRequired = useInputStore((state) => state.setIsRequired);
+  const useObscuredText = useInputStore((state) => state.useObscuredText);
+  const setUseObscuredText = useInputStore((state) => state.setUseObscuredText);
+  const maxLength = useInputStore((state) => state.maxLength);
+  const setMaxLength = useInputStore((state) => state.setMaxLength);
+  const minLength = useInputStore((state) => state.minLength);
+  const setMinLength = useInputStore((state) => state.setMinLength);
+  const inputType = useInputStore((state) => state.inputType);
+  const obscureTextSymbol = useInputStore((state) => state.obscureTextSymbol);
+  const setObscureTextSymbol = useInputStore((state) => state.setObscureTextSymbol);
 
   return (
     <div>

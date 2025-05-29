@@ -4,14 +4,12 @@ import ConfigSection from "../../ui/ConfigSection";
 import { inputTypeOptions } from "./config-options";
 
 const ContentConfig = () => {
-  const {
-    inputType,
-    setInputType,
-    placeholderText,
-    setPlaceholderText,
-    valueText,
-    setValueText,
-  } = useInputStore();
+  const inputType = useInputStore((state) => state.inputType);
+  const setInputType = useInputStore((state) => state.setInputType);
+  const placeholderText = useInputStore((state) => state.placeholderText);
+  const setPlaceholderText = useInputStore((state) => state.setPlaceholderText);
+  const valueText = useInputStore((state) => state.valueText);
+  const setValueText = useInputStore((state) => state.setValueText);
 
   return (
     <ConfigSection title={"Input Content and Type"} icon={"Keyboard"}>

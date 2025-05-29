@@ -4,20 +4,20 @@ import ConfigSection from "../../ui/ConfigSection";
 import { fontSizeOptions, fontWeightOptions } from "./config-options";
 
 const LabelConfig = () => {
-  const {
-    isLabelDisplayed,
-    setIsLabelDisplayed,
-    labelText,
-    setLabelText,
-    labelTextColor,
-    setLabelTextColor,
-    labelHoverTextColor,
-    setLabelHoverTextColor,
-    labelFontSize,
-    setLabelFontSize,
-    labelFontWeight,
-    setLabelFontWeight,
-  } = useInputStore();
+  const isLabelDisplayed = useInputStore((state) => state.isLabelDisplayed);
+  const setIsLabelDisplayed = useInputStore((state) => state.setIsLabelDisplayed);
+  const labelText = useInputStore((state) => state.labelText);
+  const setLabelText = useInputStore((state) => state.setLabelText);
+  const labelTextColor = useInputStore((state) => state.labelTextColor);
+  const setLabelTextColor = useInputStore((state) => state.setLabelTextColor);
+  const labelHoverTextColor = useInputStore((state) => state.labelHoverTextColor);
+  const setLabelHoverTextColor = useInputStore(
+    (state) => state.setLabelHoverTextColor
+  );
+  const labelFontSize = useInputStore((state) => state.labelFontSize);
+  const setLabelFontSize = useInputStore((state) => state.setLabelFontSize);
+  const labelFontWeight = useInputStore((state) => state.labelFontWeight);
+  const setLabelFontWeight = useInputStore((state) => state.setLabelFontWeight);
 
   return (
     <>

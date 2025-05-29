@@ -3,8 +3,11 @@ import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
 
 function OtherConfig() {
-  const { isDisabled, setIsDisabled, isReadOnly, setIsReadOnly } =
-    useInputStore();
+  const isDisabled = useInputStore((state) => state.isDisabled);
+  const setIsDisabled = useInputStore((state) => state.setIsDisabled);
+  const isReadOnly = useInputStore((state) => state.isReadOnly);
+  const setIsReadOnly = useInputStore((state) => state.setIsReadOnly);
+
   return (
     <div>
       <ConfigSection title="Other Settings" icon="Settings">

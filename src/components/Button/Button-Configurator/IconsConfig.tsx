@@ -4,14 +4,12 @@ import { iconPositionOptions } from "./config-options";
 import useButtonStore from "../../../store/useButtonStore";
 
 function IconsConfig() {
-  const {
-    icon,
-    setIcon,
-    iconPosition,
-    setIconPosition,
-    isIconUse,
-    setIsIconUse,
-  } = useButtonStore();
+  const icon = useButtonStore((state) => state.icon);
+  const setIcon = useButtonStore((state) => state.setIcon);
+  const iconPosition = useButtonStore((state) => state.iconPosition);
+  const setIconPosition = useButtonStore((state) => state.setIconPosition);
+  const isIconUse = useButtonStore((state) => state.isIconUse);
+  const setIsIconUse = useButtonStore((state) => state.setIsIconUse);
 
   return (
     <div>

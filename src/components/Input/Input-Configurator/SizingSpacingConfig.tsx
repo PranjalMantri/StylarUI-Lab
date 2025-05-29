@@ -9,20 +9,18 @@ import {
 } from "./config-options";
 
 function SizingSpacingConfig() {
-  const {
-    height,
-    setHeight,
-    width,
-    setWidth,
-    paddingX,
-    setPaddingX,
-    paddingY,
-    setPaddingY,
-    marginX,
-    setMarginX,
-    marginY,
-    setMarginY,
-  } = useInputStore();
+  const height = useInputStore((state) => state.height);
+  const setHeight = useInputStore((state) => state.setHeight);
+  const width = useInputStore((state) => state.width);
+  const setWidth = useInputStore((state) => state.setWidth);
+  const paddingX = useInputStore((state) => state.paddingX);
+  const setPaddingX = useInputStore((state) => state.setPaddingX);
+  const paddingY = useInputStore((state) => state.paddingY);
+  const setPaddingY = useInputStore((state) => state.setPaddingY);
+  const marginX = useInputStore((state) => state.marginX);
+  const setMarginX = useInputStore((state) => state.setMarginX);
+  const marginY = useInputStore((state) => state.marginY);
+  const setMarginY = useInputStore((state) => state.setMarginY);
 
   return (
     <div>

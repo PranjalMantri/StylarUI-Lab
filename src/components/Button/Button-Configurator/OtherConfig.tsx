@@ -3,8 +3,10 @@ import ConfigSection from "../../ui/ConfigSection";
 import useButtonStore from "../../../store/useButtonStore";
 
 function OtherConfig() {
-  const { isDisabled, setIsDisabled, isLoading, setIsLoading } =
-    useButtonStore();
+  const isDisabled = useButtonStore((state) => state.isDisabled);
+  const setIsDisabled = useButtonStore((state) => state.setIsDisabled);
+  const isLoading = useButtonStore((state) => state.isLoading);
+  const setIsLoading = useButtonStore((state) => state.setIsLoading);
   return (
     <div>
       <ConfigSection title={"Other"} icon={"Settings"}>
