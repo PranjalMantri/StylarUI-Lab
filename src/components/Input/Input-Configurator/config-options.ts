@@ -125,13 +125,3 @@ export const iconPositionOptions = [
   { label: "Left", value: "left" },
   { label: "Right", value: "right" },
 ];
-
-export const obscureTextSymbolOptions = [
-  { label: "Dot (•)", value: "•" },
-  { label: "Circle (●)", value: "●" },
-  { label: "Asterisk (*)", value: "*" },
-  { label: "Black Square (■)", value: "■" },
-  { label: "Hash (#)", value: "#" },
-  { label: "Filled Circle (⬤)", value: "⬤" },
-  { label: "Dash (—)", value: "—" },
-];

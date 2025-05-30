@@ -65,8 +65,6 @@ interface InputStore {
   setIsReadOnly: () => void;
   isRequired: boolean;
   setIsRequired: () => void;
-  useObscuredText: boolean;
-  setUseObscuredText: () => void;
   autoComplete: string;
   setAutoComplete: (autoComplete: string) => void;
   maxLength: number | undefined;
@@ -81,8 +79,6 @@ interface InputStore {
   setIconPosition: (iconPosition: "left" | "right") => void;
   iconColor: string;
   setIconColor: (iconColor: string) => void;
-  obscureTextSymbol: string;
-  setObscureTextSymbol: (obscureTextSymbol: string) => void;
 }
 
 const useInputStore = create<InputStore>((set, get) => ({
@@ -176,9 +172,6 @@ const useInputStore = create<InputStore>((set, get) => ({
   setIsReadOnly: () => set((state) => ({ isReadOnly: !state.isReadOnly })),
   isRequired: false,
   setIsRequired: () => set((state) => ({ isRequired: !state.isRequired })),
-  useObscuredText: false,
-  setUseObscuredText: () =>
-    set((state) => ({ useObscuredText: !state.useObscuredText })),
   autoComplete: "off",
   setAutoComplete: (autoComplete: string) => set({ autoComplete }),
   maxLength: 100,
@@ -193,10 +186,6 @@ const useInputStore = create<InputStore>((set, get) => ({
   setIconPosition: (iconPosition: "left" | "right") => set({ iconPosition }),
   iconColor: "#6B7280",
   setIconColor: (iconColor: string) => set({ iconColor }),
-  obscureTextSymbol: "•",
-  setObscureTextSymbol: (obscureTextSymbol: string) => {
-    set({ obscureTextSymbol });
-  },
 }));
 
 export default useInputStore;
