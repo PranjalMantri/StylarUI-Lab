@@ -7,7 +7,6 @@ function InputCodeExporter() {
     isLabelDisplayed,
     labelText,
     labelTextColor,
-    // labelHoverTextColor, // Not directly used in className
     labelFontSize,
     labelFontWeight,
     inputType,
@@ -35,7 +34,6 @@ function InputCodeExporter() {
     isDisabled,
     isReadOnly,
     isRequired,
-    // useObscuredText, // Handled by inputType="password"
     autoComplete,
     maxLength,
     minLength,
@@ -43,7 +41,6 @@ function InputCodeExporter() {
     icon,
     iconPosition,
     iconColor,
-    // obscureTextSymbol, // Not directly used in generated code
   } = useInputStore();
 
   const [copied, setCopied] = useState(false);
@@ -178,12 +175,7 @@ function InputCodeExporter() {
       .join("");
 
     const coreInputElement = `<input
-            type="${
-              inputType === "password" &&
-              useInputStore.getState().useObscuredText
-                ? "password"
-                : inputType
-            }"
+            type="${inputType === "password" ? "password" : inputType}"
             placeholder="${placeholderText}"
             value={value} 
             onChange={(e) => setValue(e.target.value)} 
