@@ -1,6 +1,7 @@
 import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
 import useDropdownStore from "../../../store/dropdownStore";
+import { fontSizeOptions, fontWeightOptions } from "./options";
 
 function LabelConfig() {
   const label = useDropdownStore((state) => state.label);
@@ -34,17 +35,17 @@ function LabelConfig() {
           />
           <ConfigItem
             title={"Label Font Size"}
-            type={"input"}
+            type={"select"}
             value={labelFontSize}
             onChange={setLabelFontSize}
-            placeholder={"Enter label font size"}
+            options={fontSizeOptions}
           />
           <ConfigItem
             title={"Label Font Weight"}
             type={"select"}
             value={labelFontWeight}
             onChange={setLabelFontWeight}
-            placeholder={"Enter label font weight"}
+            options={fontWeightOptions}
           />
         </div>
       </ConfigSection>
