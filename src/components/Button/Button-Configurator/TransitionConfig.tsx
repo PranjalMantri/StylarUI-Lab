@@ -21,7 +21,7 @@ function TransitionConfig() {
   return (
     <div>
       {" "}
-      <ConfigSection title="Transition Settings" icon={"Zap"}>
+      <ConfigSection title="Transition Settings" icon={"Sparkles"}>
         <div className="grid grid-cols-2 gap-x-4">
           <ConfigItem
             title="Base Transition"
