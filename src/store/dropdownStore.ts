@@ -21,6 +21,8 @@ interface DropdownState {
   setBorderWidth: (width: string) => void;
   borderStyle: string;
   setBorderStyle: (style: string) => void;
+  borderSide: string;
+  setBorderSide: (side: string) => void;
   borderColor: string;
   setBorderColor: (color: string) => void;
   borderRadius: string;
@@ -102,6 +104,8 @@ const useDropdownStore = create<DropdownState>((set) => ({
   setBorderWidth: (width) => set({ borderWidth: width }),
   borderStyle: "solid",
   setBorderStyle: (style) => set({ borderStyle: style }),
+  borderSide: "border",
+  setBorderSide: (side) => set({ borderSide: side }),
   borderColor: "#475569",
   setBorderColor: (color) => set({ borderColor: color }),
   borderRadius: "rounded-md",
