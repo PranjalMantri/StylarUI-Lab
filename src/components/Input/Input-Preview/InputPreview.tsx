@@ -55,8 +55,6 @@ function InputPreview() {
     icon,
     iconPosition,
     iconColor,
-    useObscuredText,
-    obscureTextSymbol,
     labelCustomClass,
     inputCustomClass,
     isRequired,
@@ -127,11 +125,6 @@ function InputPreview() {
     ...valueFontStyles,
   };
 
-  const displayedValue =
-    useObscuredText && inputType === "password"
-      ? obscureTextSymbol.repeat(String(valueText).length)
-      : valueText;
-
   return (
     <div style={inputContainerStyles} className="flex flex-col">
       {isLabelDisplayed && (
@@ -157,7 +150,7 @@ function InputPreview() {
           />
         )}
         <input
-          type={"text"}
+          type={inputType}
           style={{
             ...inputElementStyles,
             paddingLeft:
@@ -171,7 +164,7 @@ function InputPreview() {
           }}
           className={`w-full outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all duration-150 ease-in-out ${inputCustomClass}`}
           placeholder={placeholderText}
-          value={displayedValue}
+          value={valueText}
           disabled={isDisabled}
           readOnly={isReadOnly}
           onFocus={() => setIsFocused(true)}
