@@ -2,6 +2,7 @@ import { Eye } from "lucide-react";
 import useComponentStore from "../../store/componentStore";
 import ButtonPreview from "../Button/Button-Preview/ButtonPreview";
 import InputPreview from "../Input/Input-Preview/InputPreview";
+import DropdownPreview from "../Dropdown/Dropdown-Preview/DropdownPreview";
 
 function ComponentPreview() {
   const { currentComponent } = useComponentStore();
@@ -12,6 +13,8 @@ function ComponentPreview() {
         return <ButtonPreview />;
       case "input":
         return <InputPreview />;
+      case "dropdown":
+        return <DropdownPreview />;
       default:
         return (
           <span className="text-slate-400">Nothing to preview... yet.</span>

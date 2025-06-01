@@ -10,7 +10,6 @@ export const COMPONENTS: Array<{
     id: "dropdown",
     name: "Dropdown Select",
     iconName: "ChevronsUpDown",
-    disabled: true,
   },
   { id: "checkbox", name: "Checkbox", iconName: "CheckSquare", disabled: true },
   { id: "radio", name: "Radio Group", iconName: "List", disabled: true },

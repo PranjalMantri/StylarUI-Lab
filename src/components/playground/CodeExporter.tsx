@@ -2,6 +2,7 @@ import { Code } from "lucide-react";
 import ButtonCodeExporter from "../Button/CodeExporter/ButtonCodeExporter";
 import useComponentStore from "../../store/componentStore";
 import InputCodeExporter from "../Input/Input-Code-Exporter/InputCodeExporter";
+import DropdownCodeExporter from "../Dropdown/Dropdown-CodeExporter/DropdownCodeExporter";
 
 function CodeExporter() {
   const { currentComponent } = useComponentStore();
@@ -12,6 +13,8 @@ function CodeExporter() {
         return <ButtonCodeExporter />;
       case "input":
         return <InputCodeExporter />;
+      case "dropdown":
+        return <DropdownCodeExporter />;
       default:
         return <div>Select a component to get code</div>;
     }
