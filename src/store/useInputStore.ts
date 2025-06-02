@@ -150,7 +150,7 @@ const useInputStore = create<InputStore>((set, get) => ({
   setHeight: (height: string) => set({ height }),
   width: "auto",
   setWidth: (width: string) => set({ width }),
-  paddingX: "3",
+  paddingX: "4",
   setPaddingX: (paddingX: string) => set({ paddingX }),
   paddingY: "2",
   setPaddingY: (paddingY: string) => set({ paddingY }),
