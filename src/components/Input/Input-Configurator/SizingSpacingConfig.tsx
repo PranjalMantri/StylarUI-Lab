@@ -1,12 +1,12 @@
 import useInputStore from "../../../store/useInputStore";
-import ConfigItem from "../../ui/ConfigItem";
-import ConfigSection from "../../ui/ConfigSection";
 import {
   heightOptions,
   widthOptions,
   paddingOptions,
   marginOptions,
-} from "./config-options";
+} from "../../../utils/config/config-options";
+import ConfigItem from "../../ui/ConfigItem";
+import ConfigSection from "../../ui/ConfigSection";
 
 function SizingSpacingConfig() {
   const height = useInputStore((state) => state.height);

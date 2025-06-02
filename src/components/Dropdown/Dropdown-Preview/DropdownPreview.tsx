@@ -1,21 +1,22 @@
 import React from "react";
 import useDropdownStore from "../../../store/dropdownStore";
+
+import { buildBorderStyle } from "../../../utils/preview/styleUtils";
 import {
-  borderRadiusMap,
-  borderSideMap,
-  borderWidthMap,
-  boxShadowMap,
   fontSizeMap,
   fontWeightMap,
-  heightMap,
+  borderWidthMap,
+  borderSideMap,
   paddingValues,
-  transitionDelayMap,
-  transitionDurationMap,
   transitionPropertyMap,
   transitionTimingFunctionMap,
+  transitionDelayMap,
+  transitionDurationMap,
+  borderRadiusMap,
+  boxShadowMap,
+  heightMap,
   widthMap,
-} from "./styleMaps";
-import { buildBorderStyle } from "../../../utils/preview/styleUtils";
+} from "../../../utils/preview/styleMaps";
 
 function DropdownPreview() {
   const [isHovered, setIsHovered] = React.useState(false);

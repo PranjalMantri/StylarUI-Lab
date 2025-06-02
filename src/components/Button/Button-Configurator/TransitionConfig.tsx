@@ -6,7 +6,7 @@ import {
   durationOptions,
   timingFunctionOptions,
   delayOptions,
-} from "./config-options";
+} from "../../../utils/config/config-options";
 
 function TransitionConfig() {
   const baseTransition = useButtonStore((state) => state.baseTransition);

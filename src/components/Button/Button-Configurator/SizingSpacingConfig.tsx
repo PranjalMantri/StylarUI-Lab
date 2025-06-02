@@ -6,7 +6,7 @@ import {
   widthOptions,
   paddingOptions,
   marginOptions,
-} from "./config-options";
+} from "../../../utils/config/config-options";
 
 function SizingSpacingConfig() {
   const width = useButtonStore((state) => state.width);

@@ -1,11 +1,11 @@
 import useInputStore from "../../../store/useInputStore";
-import ConfigItem from "../../ui/ConfigItem";
-import ConfigSection from "../../ui/ConfigSection";
 import {
   fontSizeOptions,
   fontWeightOptions,
   textAlignOptions,
-} from "./config-options";
+} from "../../../utils/config/config-options";
+import ConfigItem from "../../ui/ConfigItem";
+import ConfigSection from "../../ui/ConfigSection";
 
 const AppearanceConfig = () => {
   const valueTextColor = useInputStore((state) => state.valueTextColor);

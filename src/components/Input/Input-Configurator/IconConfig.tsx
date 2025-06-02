@@ -1,7 +1,7 @@
 import useInputStore from "../../../store/useInputStore";
+import { iconPositionOptions } from "../../../utils/config/config-options";
 import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
-import { iconPositionOptions } from "./config-options";
 
 function IconConfig() {
   const hasIcon = useInputStore((state) => state.hasIcon);

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useButtonStore from "../../../store/useButtonStore";
 import * as LucideIcons from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import type { BorderStyleProperty } from "./types";
+import type { BorderStyleProperty } from "../../../utils/preview/types";
 import {
   borderWidthMap,
   borderSideMap,
@@ -18,8 +18,11 @@ import {
   transitionPropertyMap,
   transitionTimingFunctionMap,
   widthMap,
-} from "./styleMaps";
-import { buildBorderStyle, buildGradient } from "./styleUtils";
+} from "../../../utils/preview/styleMaps";
+import {
+  buildBorderStyle,
+  buildGradient,
+} from "../../../utils/preview/styleUtils";
 
 const ButtonPreview: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);

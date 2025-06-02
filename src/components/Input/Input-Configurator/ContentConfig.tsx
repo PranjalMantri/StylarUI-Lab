@@ -1,7 +1,7 @@
 import useInputStore from "../../../store/useInputStore";
+import { inputTypeOptions } from "../../../utils/config/config-options";
 import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
-import { inputTypeOptions } from "./config-options";
 
 const ContentConfig = () => {
   const inputType = useInputStore((state) => state.inputType);

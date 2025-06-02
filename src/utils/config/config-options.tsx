@@ -166,3 +166,17 @@ export const gradientDirectionOptions = [
   { label: "Top Left to Bottom Right", value: "to-br" },
   { label: "Bottom Right to Top Left", value: "to-tl" },
 ];
+
+export const textAlignOptions = [
+  { label: "Left", value: "text-left" },
+  { label: "Center", value: "text-center" },
+  { label: "Right", value: "text-right" },
+];
+
+export const inputTypeOptions = [
+  { label: "Text", value: "text" },
+  { label: "Password", value: "password" },
+  { label: "Email", value: "email" },
+  { label: "Number", value: "number" },
+  { label: "Url", value: "url" },
+];

@@ -2,21 +2,21 @@ import React, { useState } from "react";
 import useInputStore from "../../../store/useInputStore";
 import * as LucideIcons from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import type { BorderStyleProperty } from "./types";
+import { buildBorderStyle } from "../../../utils/preview/styleUtils";
 import {
   borderWidthMap,
   borderSideMap,
-  borderRadiusMap,
   boxShadowMap,
+  borderRadiusMap,
+  heightMap,
+  widthMap,
+  paddingValues,
   fontSizeMap,
   fontWeightMap,
-  heightMap,
-  paddingValues,
-  widthMap,
+  iconSizeMap,
   textAlignMap,
-  iconSizeMap, // Added iconSizeMap import
-} from "./styleMaps";
-import { buildBorderStyle } from "./styleUtils";
+} from "../../../utils/preview/styleMaps";
+import type { BorderStyleProperty } from "../../../utils/preview/types";
 
 function InputPreview() {
   const [isFocused, setIsFocused] = useState(false);

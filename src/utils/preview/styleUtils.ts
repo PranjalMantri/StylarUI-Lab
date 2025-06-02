@@ -18,7 +18,7 @@ export function buildBorderStyle({
   sides,
 }: {
   width: string;
-  style: BorderStyleProperty;
+  style: string | BorderStyleProperty;
   color: string;
   sides: string;
 }): React.CSSProperties {

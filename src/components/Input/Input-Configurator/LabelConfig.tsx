@@ -1,16 +1,23 @@
 import useInputStore from "../../../store/useInputStore";
+import {
+  fontSizeOptions,
+  fontWeightOptions,
+} from "../../../utils/config/config-options";
 import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
-import { fontSizeOptions, fontWeightOptions } from "./config-options";
 
 const LabelConfig = () => {
   const isLabelDisplayed = useInputStore((state) => state.isLabelDisplayed);
-  const setIsLabelDisplayed = useInputStore((state) => state.setIsLabelDisplayed);
+  const setIsLabelDisplayed = useInputStore(
+    (state) => state.setIsLabelDisplayed
+  );
   const labelText = useInputStore((state) => state.labelText);
   const setLabelText = useInputStore((state) => state.setLabelText);
   const labelTextColor = useInputStore((state) => state.labelTextColor);
   const setLabelTextColor = useInputStore((state) => state.setLabelTextColor);
-  const labelHoverTextColor = useInputStore((state) => state.labelHoverTextColor);
+  const labelHoverTextColor = useInputStore(
+    (state) => state.labelHoverTextColor
+  );
   const setLabelHoverTextColor = useInputStore(
     (state) => state.setLabelHoverTextColor
   );

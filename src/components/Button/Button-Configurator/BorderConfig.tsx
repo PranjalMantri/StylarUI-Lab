@@ -1,7 +1,11 @@
 import useButtonStore from "../../../store/useButtonStore";
 import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
-import { borderWidths, borderStyles, sidesOptions } from "./config-options";
+import {
+  borderWidths,
+  borderStyles,
+  sidesOptions,
+} from "../../../utils/config/config-options";
 
 function BorderConfig() {
   const borderWidth = useButtonStore((state) => state.borderWidth);

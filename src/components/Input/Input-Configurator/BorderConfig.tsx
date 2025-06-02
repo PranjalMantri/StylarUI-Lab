@@ -1,7 +1,11 @@
 import useInputStore from "../../../store/useInputStore";
+import {
+  borderWidths,
+  borderStyles,
+  sidesOptions,
+} from "../../../utils/config/config-options";
 import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
-import { borderWidths, borderStyles, sidesOptions } from "./config-options";
 
 const BorderConfig = () => {
   const borderWidth = useInputStore((state) => state.borderWidth);

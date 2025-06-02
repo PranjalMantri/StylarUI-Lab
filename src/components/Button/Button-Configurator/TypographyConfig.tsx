@@ -1,6 +1,9 @@
 import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
-import { fontSizeOptions, fontWeightOptions } from "./config-options";
+import {
+  fontSizeOptions,
+  fontWeightOptions,
+} from "../../../utils/config/config-options";
 import useButtonStore from "../../../store/useButtonStore";
 
 function TypographyConfig() {

@@ -1,6 +1,6 @@
 import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
-import { iconPositionOptions } from "./config-options";
+import { iconPositionOptions } from "../../../utils/config/config-options";
 import useButtonStore from "../../../store/useButtonStore";
 
 function IconsConfig() {

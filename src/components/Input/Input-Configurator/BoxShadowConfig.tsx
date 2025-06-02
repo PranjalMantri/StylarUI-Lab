@@ -1,7 +1,10 @@
 import useInputStore from "../../../store/useInputStore";
+import {
+  borderRadiusOptions,
+  boxShadowOptions,
+} from "../../../utils/config/config-options";
 import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
-import { borderRadiusOptions, boxShadowOptions } from "./config-options";
 
 function BoxShadowConfig() {
   const borderRadius = useInputStore((state) => state.borderRadius);

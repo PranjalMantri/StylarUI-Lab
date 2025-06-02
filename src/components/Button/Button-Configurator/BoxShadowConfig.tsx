@@ -1,7 +1,10 @@
 import useButtonStore from "../../../store/useButtonStore";
 import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
-import { borderRadiusOptions, boxShadowOptions } from "./config-options";
+import {
+  borderRadiusOptions,
+  boxShadowOptions,
+} from "../../../utils/config/config-options";
 
 function BoxShadowConfig() {
   const borderRadius = useButtonStore((state) => state.borderRadius);

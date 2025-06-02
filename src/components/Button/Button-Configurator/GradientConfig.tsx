@@ -1,7 +1,7 @@
 import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
 import useButtonStore from "../../../store/useButtonStore";
-import { gradientDirectionOptions } from "./config-options";
+import { gradientDirectionOptions } from "../../../utils/config/config-options";
 
 function GradientConfig() {
   const isGradientActive = useButtonStore((state) => state.isGradientActive);
