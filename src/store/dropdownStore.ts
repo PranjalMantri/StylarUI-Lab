@@ -65,10 +65,6 @@ interface DropdownState {
   setSelectedOptionTextColor: (color: string) => void;
   selectedOptionBgColor: string;
   setSelectedOptionBgColor: (color: string) => void;
-  selectedOptionHoverTextColor: string;
-  setSelectedOptionHoverTextColor: (color: string) => void;
-  selectedOptionHoverBgColor: string;
-  setSelectedOptionHoverBgColor: (color: string) => void;
   focusRingColor: string;
   setFocusRingColor: (color: string) => void;
   focusBorderColor: string;
@@ -84,7 +80,7 @@ interface DropdownState {
 }
 
 const useDropdownStore = create<DropdownState>((set) => ({
-  label: "Select an option",
+  label: "Choose an option",
   setLabel: (label) => set({ label }),
   labelColor: "#CBD5E1",
   setLabelColor: (color) => set({ labelColor: color }),
@@ -116,9 +112,9 @@ const useDropdownStore = create<DropdownState>((set) => ({
   setWidth: (width) => set({ width }),
   height: "auto",
   setHeight: (height) => set({ height }),
-  paddingX: "3",
+  paddingX: "2",
   setPaddingX: (paddingX) => set({ paddingX }),
-  paddingY: "2",
+  paddingY: "1",
   setPaddingY: (paddingY) => set({ paddingY }),
   marginX: "0",
   setMarginX: (marginX) => set({ marginX }),
@@ -151,11 +147,6 @@ const useDropdownStore = create<DropdownState>((set) => ({
   selectedOptionBgColor: "#334155",
   setSelectedOptionBgColor: (color) => set({ selectedOptionBgColor: color }),
   selectedOptionHoverTextColor: "#E2E8F0",
-  setSelectedOptionHoverTextColor: (color) =>
-    set({ selectedOptionHoverTextColor: color }),
-  selectedOptionHoverBgColor: "#1E293B",
-  setSelectedOptionHoverBgColor: (color) =>
-    set({ selectedOptionHoverBgColor: color }),
   focusRingColor: "#0EA5E9",
   setFocusRingColor: (color) => set({ focusRingColor: color }),
   focusBorderColor: "#0EA5E9",
