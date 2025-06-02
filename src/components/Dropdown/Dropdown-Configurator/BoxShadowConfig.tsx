@@ -1,7 +1,10 @@
 import useDropdownStore from "../../../store/dropdownStore";
+import {
+  borderRadiusOptions,
+  boxShadowOptions,
+} from "../../../utils/config/config-options";
 import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
-import { borderRadiusOptions, boxShadowOptions } from "./options";
 
 function BoxShadowConfig() {
   const borderRadius = useDropdownStore((state) => state.borderRadius);

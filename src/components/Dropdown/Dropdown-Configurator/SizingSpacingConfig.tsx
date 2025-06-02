@@ -6,7 +6,7 @@ import {
   widthOptions,
   paddingOptions,
   marginOptions,
-} from "./options";
+} from "../../../utils/config/config-options";
 
 function SizingSpacingConfig() {
   const width = useDropdownStore((state) => state.width);

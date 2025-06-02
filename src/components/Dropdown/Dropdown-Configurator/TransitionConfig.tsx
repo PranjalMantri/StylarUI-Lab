@@ -1,12 +1,12 @@
 import useDropdownStore from "../../../store/dropdownStore";
-import ConfigItem from "../../ui/ConfigItem";
-import ConfigSection from "../../ui/ConfigSection";
 import {
   transitionPropertyOptions,
   durationOptions,
   timingFunctionOptions,
   delayOptions,
-} from "./options";
+} from "../../../utils/config/config-options";
+import ConfigItem from "../../ui/ConfigItem";
+import ConfigSection from "../../ui/ConfigSection";
 
 function TransitionConfig() {
   const baseTransition = useDropdownStore((state) => state.baseTransition);

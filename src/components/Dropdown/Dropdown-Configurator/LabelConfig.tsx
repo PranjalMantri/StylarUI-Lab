@@ -1,7 +1,10 @@
 import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
 import useDropdownStore from "../../../store/dropdownStore";
-import { fontSizeOptions, fontWeightOptions } from "./options";
+import {
+  fontSizeOptions,
+  fontWeightOptions,
+} from "../../../utils/config/config-options";
 
 function LabelConfig() {
   const label = useDropdownStore((state) => state.label);

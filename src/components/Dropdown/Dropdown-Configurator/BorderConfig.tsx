@@ -1,7 +1,11 @@
 import useDropdownStore from "../../../store/dropdownStore";
+import {
+  borderStyles,
+  borderWidths,
+  sidesOptions,
+} from "../../../utils/config/config-options";
 import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
-import { borderStyles, borderWidths, sidesOptions } from "./options";
 
 function BorderConfig() {
   const borderWidth = useDropdownStore((state) => state.borderWidth);
