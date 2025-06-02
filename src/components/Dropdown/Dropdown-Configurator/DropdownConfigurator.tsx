@@ -10,7 +10,7 @@ import SelectedOptionConfig from "./SelectedOptionConfig";
 
 function DropdownConfigurator() {
   return (
-    <div>
+    <div className="max-h-[65vh] overflow-y-auto scrollbar scrollbar-w-1 scrollbar-thumb-sky-500 scrollbar-thumb-rounded-full">
       <LabelConfig />
       <DropdownAppearanceConfig />
       <OptionConfig />
