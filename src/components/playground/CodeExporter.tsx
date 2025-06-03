@@ -3,6 +3,7 @@ import ButtonCodeExporter from "../Button/CodeExporter/ButtonCodeExporter";
 import useComponentStore from "../../store/componentStore";
 import InputCodeExporter from "../Input/Input-Code-Exporter/InputCodeExporter";
 import DropdownCodeExporter from "../Dropdown/Dropdown-CodeExporter/DropdownCodeExporter";
+import CheckboxCodeExporter from "../Checkbox/Checkbox-CodeExporter/CheckboxCodeExporter";
 
 function CodeExporter() {
   const { currentComponent } = useComponentStore();
@@ -15,6 +16,8 @@ function CodeExporter() {
         return <InputCodeExporter />;
       case "dropdown":
         return <DropdownCodeExporter />;
+      case "checkbox":
+        return <CheckboxCodeExporter />;
       default:
         return <div>Select a component to get code</div>;
     }

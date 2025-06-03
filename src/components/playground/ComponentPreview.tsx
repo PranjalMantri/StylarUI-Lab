@@ -3,6 +3,7 @@ import useComponentStore from "../../store/componentStore";
 import ButtonPreview from "../Button/Button-Preview/ButtonPreview";
 import InputPreview from "../Input/Input-Preview/InputPreview";
 import DropdownPreview from "../Dropdown/Dropdown-Preview/DropdownPreview";
+import CheckboxPreview from "../Checkbox/Checkbox-Preview/CheckboxPreview";
 
 function ComponentPreview() {
   const { currentComponent } = useComponentStore();
@@ -15,6 +16,8 @@ function ComponentPreview() {
         return <InputPreview />;
       case "dropdown":
         return <DropdownPreview />;
+      case "checkbox":
+        return <CheckboxPreview />;
       default:
         return (
           <span className="text-slate-400">Nothing to preview... yet.</span>
