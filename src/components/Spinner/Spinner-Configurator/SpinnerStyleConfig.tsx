@@ -1,6 +1,5 @@
 import useSpinnerStore from "../../../store/spinnerStore";
 import {
-  spinnerShapeOptions,
   spinnerDirectionOptions,
   spinnerSizeOptions,
   spinnerThicknessOptions,
@@ -9,8 +8,6 @@ import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
 
 function SpinnerStyleConfig() {
-  const spinnerShape = useSpinnerStore((state) => state.spinnerShape);
-  const setSpinnerShape = useSpinnerStore((state) => state.setSpinnerShape);
   const spinnerDirection = useSpinnerStore((state) => state.spinnerDirection);
   const setSpinnerDirection = useSpinnerStore(
     (state) => state.setSpinnerDirection
@@ -28,13 +25,6 @@ function SpinnerStyleConfig() {
     <div>
       <ConfigSection title={"Spinner Style"} icon={"LoaderCircle"}>
         <div className="grid grid-cols-2 md:grid-cols-2 gap-x-4 gap-y-2 md:gap-y-0">
-          <ConfigItem
-            title={"Shape"}
-            type={"select"}
-            value={spinnerShape}
-            onChange={setSpinnerShape}
-            options={spinnerShapeOptions}
-          />
           <ConfigItem
             title={"Direction"}
             type={"select"}
@@ -56,14 +46,14 @@ function SpinnerStyleConfig() {
             onChange={setSpinnerThickness}
             options={spinnerThicknessOptions}
           />
-        </div>
 
-        <ConfigItem
-          title={"Color"}
-          type={"color"}
-          value={spinnerColor}
-          onChange={setSpinnerColor}
-        />
+          <ConfigItem
+            title={"Color"}
+            type={"color"}
+            value={spinnerColor}
+            onChange={setSpinnerColor}
+          />
+        </div>
       </ConfigSection>
     </div>
   );

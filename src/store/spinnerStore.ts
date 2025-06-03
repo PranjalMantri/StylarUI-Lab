@@ -1,8 +1,6 @@
 import { create } from "zustand";
 
 interface SpinnerState {
-  spinnerShape: string;
-  setSpinnerShape: (shape: string) => void;
   spinnerDirection: string;
   setSpinnerDirection: (direction: string) => void;
   spinnerSize: string;
@@ -30,15 +28,13 @@ interface SpinnerState {
 }
 
 const useSpinnerStore = create<SpinnerState>((set) => ({
-  spinnerShape: "circle",
-  setSpinnerShape: (shape) => set({ spinnerShape: shape }),
   spinnerDirection: "clockwise",
   setSpinnerDirection: (direction) => set({ spinnerDirection: direction }),
   spinnerSize: "medium",
   setSpinnerSize: (size) => set({ spinnerSize: size }),
   spinnerThickness: "normal",
   setSpinnerThickness: (thickness) => set({ spinnerThickness: thickness }),
-  spinnerColor: "#000000",
+  spinnerColor: "#45556c",
   setSpinnerColor: (color) => set({ spinnerColor: color }),
   animationSpeed: "normal",
   setAnimationSpeed: (speed) => set({ animationSpeed: speed }),
@@ -48,7 +44,7 @@ const useSpinnerStore = create<SpinnerState>((set) => ({
   setIsLabelDisplayed: (isDisplayed) => set({ isLabelDisplayed: isDisplayed }),
   labelText: "Loading...",
   setLabelText: (text) => set({ labelText: text }),
-  labelTextColor: "#000000",
+  labelTextColor: "#e2e8f0",
   setLabelTextColor: (color) => set({ labelTextColor: color }),
   labelFontSize: "text-base",
   setLabelFontSize: (size) => set({ labelFontSize: size }),
