@@ -200,3 +200,49 @@ export const checkboxGapOptions = [
   { label: "Medium", value: "2" },
   { label: "Large", value: "4" },
 ];
+
+export const spinnerShapeOptions = [
+  { label: "Circle", value: "circle" },
+  { label: "Square", value: "square" },
+  { label: "Triangle", value: "triangle" },
+];
+
+export const spinnerDirectionOptions = [
+  { label: "Clockwise", value: "clockwise" },
+  { label: "Counterclockwise", value: "counterclockwise" },
+];
+
+export const spinnerSizeOptions = [
+  { label: "Small", value: "small" },
+  { label: "Medium", value: "medium" },
+  { label: "Large", value: "large" },
+];
+
+export const spinnerThicknessOptions = [
+  { label: "Thin", value: "thin" },
+  { label: "Normal", value: "normal" },
+  { label: "Thick", value: "thick" },
+];
+
+export const animationSpeedOptions = [
+  { label: "Slow", value: "slow" },
+  { label: "Normal", value: "normal" },
+  { label: "Fast", value: "fast" },
+];
+
+export const delayBeforeSpinsOptions = [
+  { label: "None", value: "0s" },
+  { label: "100ms", value: "0.1s" },
+  { label: "200ms", value: "0.2s" },
+  { label: "300ms", value: "0.3s" },
+  { label: "500ms", value: "0.5s" },
+  { label: "1 second", value: "1s" },
+  { label: "1.5 seconds", value: "1.5s" },
+  { label: "2 seconds", value: "2s" },
+];
+
+export const backgroundTypeOptions = [
+  { label: "None", value: "none" },
+  { label: "Overlay", value: "overlay" },
+  { label: "Blur", value: "blur" },
+];
