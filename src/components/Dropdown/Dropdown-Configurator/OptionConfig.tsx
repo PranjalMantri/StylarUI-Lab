@@ -25,7 +25,7 @@ function OptionConfig() {
   return (
     <div>
       <ConfigSection title={"Option Styles"} icon={"Rows3"}>
-        <div className="grid grid-cols-2 gap-x-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 md:gap-y-0">
           <ConfigItem
             title={"Options Text Color"}
             type={"color"}
