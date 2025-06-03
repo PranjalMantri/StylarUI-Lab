@@ -106,7 +106,7 @@ export const fontWeightOptions = [
   { label: "Extra Bold", value: "font-extrabold" },
 ];
 
-export const iconPositionOptions = [
+export const positionOptions = [
   { label: "Left", value: "left" },
   { label: "Right", value: "right" },
 ];

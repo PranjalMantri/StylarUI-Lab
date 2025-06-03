@@ -1,5 +1,5 @@
 import useInputStore from "../../../store/useInputStore";
-import { iconPositionOptions } from "../../../utils/config/config-options";
+import { positionOptions } from "../../../utils/config/config-options";
 import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
 
@@ -37,7 +37,7 @@ function IconConfig() {
             type="select"
             value={iconPosition}
             onChange={setIconPosition}
-            options={iconPositionOptions}
+            options={positionOptions}
             disabled={!hasIcon}
           />
         </div>

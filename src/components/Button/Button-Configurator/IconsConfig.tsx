@@ -1,6 +1,6 @@
 import ConfigItem from "../../ui/ConfigItem";
 import ConfigSection from "../../ui/ConfigSection";
-import { iconPositionOptions } from "../../../utils/config/config-options";
+import { positionOptions } from "../../../utils/config/config-options";
 import useButtonStore from "../../../store/useButtonStore";
 
 function IconsConfig() {
@@ -26,7 +26,7 @@ function IconsConfig() {
           type={"select"}
           value={iconPosition}
           onChange={setIconPosition}
-          options={iconPositionOptions}
+          options={positionOptions}
           disabled={!isIconUse}
         ></ConfigItem>
         <ConfigItem
