@@ -30,7 +30,6 @@ export const COMPONENTS: Array<{
     id: "spinner",
     name: "Loading Spinner",
     iconName: "Loader2",
-    disabled: true,
   },
   {
     id: "datepicker",
