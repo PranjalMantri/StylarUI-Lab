@@ -164,3 +164,9 @@ export const iconSizeMap: Record<string, string> = {
   "text-2xl": "w-6 h-6",
   "text-3xl": "w-7 h-7",
 };
+
+export const checkboxSizeMap: Record<string, string> = {
+  sm: "16px",
+  md: "20px",
+  lg: "24px",
+};
