@@ -4,6 +4,7 @@ import useComponentStore from "../../store/componentStore";
 import InputCodeExporter from "../Input/Input-Code-Exporter/InputCodeExporter";
 import DropdownCodeExporter from "../Dropdown/Dropdown-CodeExporter/DropdownCodeExporter";
 import CheckboxCodeExporter from "../Checkbox/Checkbox-CodeExporter/CheckboxCodeExporter";
+import SpinnerCodeExporter from "../Spinner/Spinner-CodeExporter/SpinnerCodeExporter";
 
 function CodeExporter() {
   const { currentComponent } = useComponentStore();
@@ -18,6 +19,8 @@ function CodeExporter() {
         return <DropdownCodeExporter />;
       case "checkbox":
         return <CheckboxCodeExporter />;
+      case "spinner":
+        return <SpinnerCodeExporter />;
       default:
         return <div>Select a component to get code</div>;
     }
