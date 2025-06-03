@@ -170,3 +170,48 @@ export const checkboxSizeMap: Record<string, string> = {
   md: "20px",
   lg: "24px",
 };
+
+export const spinnerSizeMap: Record<string, string> = {
+  small: "24px",
+  medium: "32px",
+  large: "48px",
+};
+
+export const spinnerThicknessMap: Record<string, string> = {
+  thin: "2px",
+  normal: "3px",
+  thick: "4px",
+};
+
+export const animationSpeedMap: Record<string, string> = {
+  slow: "2s",
+  normal: "1s",
+  fast: "0.5s",
+};
+
+export const backgroundTypeMap: Record<string, React.CSSProperties> = {
+  none: {},
+  overlay: {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: "9999",
+  },
+  blur: {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    backdropFilter: "blur(4px)",
+    zIndex: "9999",
+  },
+};
