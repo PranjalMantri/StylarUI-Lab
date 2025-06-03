@@ -180,3 +180,23 @@ export const inputTypeOptions = [
   { label: "Number", value: "number" },
   { label: "Url", value: "url" },
 ];
+
+export const checkboxStyleOptions = [
+  { label: "Filled", value: "filled" },
+  { label: "Outline", value: "outline" },
+  { label: "Flat", value: "flat" },
+  { label: "Ghost", value: "ghost" },
+];
+
+export const checkboxSizingOptions = [
+  { label: "Small", value: "sm" },
+  { label: "Medium", value: "md" },
+  { label: "Large", value: "lg" },
+];
+
+export const checkboxGapOptions = [
+  { label: "None", value: "0" },
+  { label: "Small", value: "1" },
+  { label: "Medium", value: "2" },
+  { label: "Large", value: "4" },
+];
