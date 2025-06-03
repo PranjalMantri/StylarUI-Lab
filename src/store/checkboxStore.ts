@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-interface checkboxStore {
+interface CheckboxStore {
   labelText: string;
   setLabelText: (text: string) => void;
   labelPosition: string;
@@ -11,8 +11,6 @@ interface checkboxStore {
   setLabelFontSize: (size: string) => void;
   labelFontWeight: string;
   setLabelFontWeight: (weight: string) => void;
-  checkboxStyle: string;
-  setCheckboxStyle: (style: string) => void;
   checkedBackgroundColor: string;
   setCheckedBackgroundColor: (color: string) => void;
   uncheckedBackgroundColor: string;
@@ -21,6 +19,8 @@ interface checkboxStore {
   setCheckmarkColor: (color: string) => void;
   focusRingColor: string;
   setFocusRingColor: (color: string) => void;
+  checkboxStyle: string;
+  setCheckboxStyle: (style: string) => void;
   borderWidth: string;
   setBorderWidth: (width: string) => void;
   borderColor: string;
@@ -29,7 +29,6 @@ interface checkboxStore {
   setBorderRadius: (radius: string) => void;
   boxShadow: string;
   setBoxShadow: (shadow: string) => void;
-  // Checkbox sizing fields
   checkboxSize: string;
   setCheckboxSize: (size: string) => void;
   paddingInsideCheckbox: string;
@@ -46,40 +45,39 @@ interface checkboxStore {
   setTooltip: (tooltip: string) => void;
 }
 
-const useCheckboxStore = create<checkboxStore>((set) => ({
-  labelText: "",
+const useCheckboxStore = create<CheckboxStore>((set) => ({
+  labelText: "Checkbox label",
   setLabelText: (text) => set({ labelText: text }),
-  labelPosition: "left",
+  labelPosition: "right",
   setLabelPosition: (position) => set({ labelPosition: position }),
-  labelColor: "black",
+  labelColor: "#858f9d",
   setLabelColor: (color) => set({ labelColor: color }),
-  labelFontSize: "text-base",
+  labelFontSize: "text-sm",
   setLabelFontSize: (size) => set({ labelFontSize: size }),
-  labelFontWeight: "font-normal",
+  labelFontWeight: "font-medium",
   setLabelFontWeight: (weight) => set({ labelFontWeight: weight }),
-  checkedBackgroundColor: "#4CAF50",
+  checkedBackgroundColor: "#3b82f6",
   setCheckedBackgroundColor: (color) => set({ checkedBackgroundColor: color }),
-  uncheckedBackgroundColor: "#FFFFFF",
+  uncheckedBackgroundColor: "#f9fafb",
   setUncheckedBackgroundColor: (color) =>
     set({ uncheckedBackgroundColor: color }),
-  checkmarkColor: "#FFFFFF",
+  checkmarkColor: "#ffffff",
   setCheckmarkColor: (color) => set({ checkmarkColor: color }),
-  focusRingColor: "#4CAF50",
+  focusRingColor: "#3b82f6",
   setFocusRingColor: (color) => set({ focusRingColor: color }),
   checkboxStyle: "filled",
   setCheckboxStyle: (style) => set({ checkboxStyle: style }),
-  borderWidth: "border-2",
+  borderWidth: "border",
   setBorderWidth: (width) => set({ borderWidth: width }),
-  borderColor: "border-gray-300",
+  borderColor: "#d1d5db",
   setBorderColor: (color) => set({ borderColor: color }),
-  borderRadius: "rounded",
+  borderRadius: "rounded-sm",
   setBorderRadius: (radius) => set({ borderRadius: radius }),
-  boxShadow: "shadow-md",
+  boxShadow: "shadow-sm",
   setBoxShadow: (shadow) => set({ boxShadow: shadow }),
-  // Checkbox sizing state
-  checkboxSize: "md",
+  checkboxSize: "sm",
   setCheckboxSize: (size) => set({ checkboxSize: size }),
-  paddingInsideCheckbox: "2",
+  paddingInsideCheckbox: "1",
   setPaddingInsideCheckbox: (padding) =>
     set({ paddingInsideCheckbox: padding }),
   marginAroundCheckbox: "0",
