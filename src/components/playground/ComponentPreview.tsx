@@ -5,6 +5,7 @@ import InputPreview from "../Input/Input-Preview/InputPreview";
 import DropdownPreview from "../Dropdown/Dropdown-Preview/DropdownPreview";
 import CheckboxPreview from "../Checkbox/Checkbox-Preview/CheckboxPreview";
 import SpinnerPreview from "../Spinner/Spinner-Preview/SpinnerPreview";
+import SliderPreview from "../Slider/Slider-Preview/SliderPreview";
 
 function ComponentPreview() {
   const { currentComponent } = useComponentStore();
@@ -21,6 +22,8 @@ function ComponentPreview() {
         return <CheckboxPreview />;
       case "spinner":
         return <SpinnerPreview />;
+      case "slider":
+        return <SliderPreview />;
       default:
         return (
           <span className="text-slate-400">Nothing to preview... yet.</span>
