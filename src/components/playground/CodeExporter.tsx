@@ -5,6 +5,7 @@ import InputCodeExporter from "../Input/Input-Code-Exporter/InputCodeExporter";
 import DropdownCodeExporter from "../Dropdown/Dropdown-CodeExporter/DropdownCodeExporter";
 import CheckboxCodeExporter from "../Checkbox/Checkbox-CodeExporter/CheckboxCodeExporter";
 import SpinnerCodeExporter from "../Spinner/Spinner-CodeExporter/SpinnerCodeExporter";
+import SliderCodeExporter from "../Slider/Sider-CodeExporter/SliderCodeExporter";
 
 function CodeExporter() {
   const { currentComponent } = useComponentStore();
@@ -21,6 +22,8 @@ function CodeExporter() {
         return <CheckboxCodeExporter />;
       case "spinner":
         return <SpinnerCodeExporter />;
+      case "slider":
+        return <SliderCodeExporter />;
       default:
         return <div>Select a component to get code</div>;
     }
