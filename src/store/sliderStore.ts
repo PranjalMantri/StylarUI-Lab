@@ -23,8 +23,8 @@ interface SliderStore {
   setLabelText: (text: string) => void;
   labelTextColor: string;
   setLabelTextColor: (color: string) => void;
-  labelPosition: string;
-  setLabelPosition: (position: string) => void;
+  labelPosition: "left" | "right";
+  setLabelPosition: (position: "left" | "right") => void;
   labelFontSize: string;
   setLabelFontSize: (size: string) => void;
   labelFontWeight: string;
@@ -36,37 +36,37 @@ interface SliderStore {
 }
 
 const useSliderStore = create<SliderStore>((set) => ({
-  sliderColor: "#4A90E2",
-  setSliderColor: (color) => set({ sliderColor: color }),
-  sliderSize: "medium",
-  setSliderSize: (size) => set({ sliderSize: size }),
-  sliderVariant: "outline",
-  setSliderVariant: (variant) => set({ sliderVariant: variant }),
+  sliderColor: "#38bdf8",
+  sliderVariant: "filled",
+  labelTextColor: "#475569",
+  labelPosition: "left",
+  defaultValue: 25,
+  sliderSize: "md",
   minValue: 0,
-  setMinValue: (value) => set({ minValue: value }),
   maxValue: 100,
-  setMaxValue: (value) => set({ maxValue: value }),
-  defaultValue: 50,
-  setDefaultValue: (value) => set({ defaultValue: value }),
   isDisabled: false,
-  setIsDisabled: (disabled) => set({ isDisabled: disabled }),
   isReadOnly: false,
-  setIsReadOnly: (readOnly) => set({ isReadOnly: readOnly }),
   isLabelDisplayed: true,
-  setIsLabelDisplayed: (displayed) => set({ isLabelDisplayed: displayed }),
-  labelText: "Label",
-  setLabelText: (text) => set({ labelText: text }),
-  labelTextColor: "#000000",
-  setLabelTextColor: (color) => set({ labelTextColor: color }),
-  labelPosition: "top",
-  setLabelPosition: (position) => set({ labelPosition: position }),
+  labelText: "Volume",
   labelFontSize: "14px",
-  setLabelFontSize: (size) => set({ labelFontSize: size }),
-  labelFontWeight: "normal",
-  setLabelFontWeight: (weight) => set({ labelFontWeight: weight }),
+  labelFontWeight: "medium",
   isShowValue: true,
+  toolTip: "Adjust the value by dragging the slider",
+  setSliderColor: (color) => set({ sliderColor: color }),
+  setSliderSize: (size) => set({ sliderSize: size }),
+  setSliderVariant: (variant) => set({ sliderVariant: variant }),
+  setMinValue: (value) => set({ minValue: value }),
+  setMaxValue: (value) => set({ maxValue: value }),
+  setDefaultValue: (value) => set({ defaultValue: value }),
+  setIsDisabled: (disabled) => set({ isDisabled: disabled }),
+  setIsReadOnly: (readOnly) => set({ isReadOnly: readOnly }),
+  setIsLabelDisplayed: (displayed) => set({ isLabelDisplayed: displayed }),
+  setLabelText: (text) => set({ labelText: text }),
+  setLabelTextColor: (color) => set({ labelTextColor: color }),
+  setLabelPosition: (position) => set({ labelPosition: position }),
+  setLabelFontSize: (size) => set({ labelFontSize: size }),
+  setLabelFontWeight: (weight) => set({ labelFontWeight: weight }),
   setIsShowValue: (show) => set({ isShowValue: show }),
-  toolTip: "",
   setToolTip: (tooltip) => set({ toolTip: tooltip }),
 }));
 
