@@ -246,3 +246,14 @@ export const backgroundTypeOptions = [
   { label: "Overlay", value: "overlay" },
   { label: "Blur", value: "blur" },
 ];
+
+export const sliderSizeOptions = [
+  { label: "Small", value: "sm" },
+  { label: "Medium", value: "md" },
+  { label: "Large", value: "lg" },
+];
+
+export const sliderVariantOptions = [
+  { label: "Outline", value: "outline" },
+  { label: "Filled", value: "filled" },
+];

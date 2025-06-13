@@ -25,7 +25,7 @@ export const COMPONENTS: Array<{
     iconName: "AlertTriangle",
     disabled: true,
   },
-  { id: "progress", name: "Progress Bar", iconName: "Sliders", disabled: true },
+  { id: "slider", name: "Slider", iconName: "Sliders" },
   {
     id: "spinner",
     name: "Loading Spinner",

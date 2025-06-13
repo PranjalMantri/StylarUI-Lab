@@ -4,6 +4,7 @@ import InputConfigurator from "../Input/Input-Configurator/InputConfigurator";
 import DropdownConfigurator from "../Dropdown/Dropdown-Configurator/DropdownConfigurator";
 import CheckboxConfigurator from "../Checkbox/Checkbox-Configurator/CheckboxConfigurator";
 import SpinnerConfigurator from "../Spinner/Spinner-Configurator/SpinnerConfigurator";
+import SliderConfigurator from "../Slider/Slider-Configurator/SliderConfigurator";
 
 const Configurator = () => {
   const { currentComponent } = useComponentStore();
@@ -19,6 +20,8 @@ const Configurator = () => {
       return <CheckboxConfigurator />;
     case "spinner":
       return <SpinnerConfigurator />;
+    case "slider":
+      return <SliderConfigurator />;
     default:
       return <div>Select a component to customize</div>;
   }
