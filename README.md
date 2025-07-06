@@ -1,15 +1,12 @@
 # StylarUi Lab
 
-StylarUi Lab is a modern React + TypeScript application built with Vite, designed for rapid prototyping and configuration of UI components. The project features a playground where users can interactively customize and preview UI elements such as buttons and inputs, and export their code for use in other projects.
+StylarUi Lab is a modern React + TypeScript application built with Vite, designed for rapid prototyping and configuration of UI components. The project features a playground where users can interactively customize and preview UI elements such as Buttons, Checkboxes, Dropdowns, Inputs, Sliders, and Spinners, and export their code for use in other projects.
 
 ## Features
 
 - **Component Playground:** Visually configure and preview UI components in real time.
 - **Code Export:** Instantly generate and copy the code for your configured components.
-- **Modular Architecture:** Organized by component type (Button, Input, etc.) for easy extension and maintenance.
-- **TypeScript Support:** Ensures type safety and improved developer experience.
-- **Vite-Powered:** Fast development server with Hot Module Replacement (HMR).
-- **ESLint Integration:** Enforced code quality with recommended and type-aware linting rules.
+- **Supported Components:** Button, Checkbox, Dropdown, Input, Slider, Spinner.
 
 ## Getting Started
 
@@ -42,7 +39,12 @@ Open [http://localhost:5173](http://localhost:5173) to view the app in your brow
 src/
   components/
     Button/
+    Checkbox/
+    Dropdown/
     Input/
+    Slider/
+    Spinner/
+    landing/
     playground/
     ui/
   constants/
@@ -51,7 +53,7 @@ src/
   store/
 ```
 
-- **components/**: Contains all UI components and their configurators/previews.
+- **components/**: Contains all UI components and their configurators/previews. Each component has its own dedicated folder.
 - **constants/**: Shared constants (e.g., component definitions, icon maps).
 - **lib/**: Utility functions.
 - **pages/**: Main application pages (e.g., Playground, LandingPage).
