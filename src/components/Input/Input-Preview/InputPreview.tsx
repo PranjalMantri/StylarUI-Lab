@@ -19,7 +19,7 @@ import {
 import type { BorderStyleProperty } from "../../../utils/preview/types";
 
 function InputPreview() {
-  const [isFocused, setIsFocused] = useState(false);
+  const [_, setIsFocused] = useState(false);
   const [isLabelHovered, setIsLabelHovered] = useState(false);
 
   const {
